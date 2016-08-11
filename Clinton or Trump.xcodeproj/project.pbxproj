@@ -1,0 +1,524 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		92A8CB271D5D243000023E42 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A8CB261D5D243000023E42 /* main.m */; };
+		92A8CB2A1D5D243000023E42 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A8CB291D5D243000023E42 /* AppDelegate.m */; };
+		92A8CB2D1D5D243000023E42 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A8CB2C1D5D243000023E42 /* ViewController.m */; };
+		92A8CB301D5D243100023E42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92A8CB2E1D5D243000023E42 /* Main.storyboard */; };
+		92A8CB321D5D243100023E42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92A8CB311D5D243100023E42 /* Assets.xcassets */; };
+		92A8CB351D5D243100023E42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92A8CB331D5D243100023E42 /* LaunchScreen.storyboard */; };
+		92A8CB401D5D243300023E42 /* Clinton_or_TrumpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A8CB3F1D5D243300023E42 /* Clinton_or_TrumpTests.m */; };
+		92A8CB4B1D5D243300023E42 /* Clinton_or_TrumpUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A8CB4A1D5D243300023E42 /* Clinton_or_TrumpUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		92A8CB3C1D5D243300023E42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92A8CB1A1D5D242E00023E42 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92A8CB211D5D242E00023E42;
+			remoteInfo = "Clinton or Trump";
+		};
+		92A8CB471D5D243300023E42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92A8CB1A1D5D242E00023E42 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92A8CB211D5D242E00023E42;
+			remoteInfo = "Clinton or Trump";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		92A8CB221D5D242F00023E42 /* Clinton or Trump.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clinton or Trump.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92A8CB261D5D243000023E42 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		92A8CB281D5D243000023E42 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		92A8CB291D5D243000023E42 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		92A8CB2B1D5D243000023E42 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		92A8CB2C1D5D243000023E42 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		92A8CB2F1D5D243000023E42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		92A8CB311D5D243100023E42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		92A8CB341D5D243100023E42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		92A8CB361D5D243100023E42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92A8CB3B1D5D243300023E42 /* Clinton or TrumpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Clinton or TrumpTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92A8CB3F1D5D243300023E42 /* Clinton_or_TrumpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Clinton_or_TrumpTests.m; sourceTree = "<group>"; };
+		92A8CB411D5D243300023E42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92A8CB461D5D243300023E42 /* Clinton or TrumpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Clinton or TrumpUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92A8CB4A1D5D243300023E42 /* Clinton_or_TrumpUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Clinton_or_TrumpUITests.m; sourceTree = "<group>"; };
+		92A8CB4C1D5D243300023E42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		92A8CB1F1D5D242E00023E42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92A8CB381D5D243300023E42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92A8CB431D5D243300023E42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		92A8CB191D5D242E00023E42 = {
+			isa = PBXGroup;
+			children = (
+				92A8CB241D5D243000023E42 /* Clinton or Trump */,
+				92A8CB3E1D5D243300023E42 /* Clinton or TrumpTests */,
+				92A8CB491D5D243300023E42 /* Clinton or TrumpUITests */,
+				92A8CB231D5D242F00023E42 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		92A8CB231D5D242F00023E42 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				92A8CB221D5D242F00023E42 /* Clinton or Trump.app */,
+				92A8CB3B1D5D243300023E42 /* Clinton or TrumpTests.xctest */,
+				92A8CB461D5D243300023E42 /* Clinton or TrumpUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		92A8CB241D5D243000023E42 /* Clinton or Trump */ = {
+			isa = PBXGroup;
+			children = (
+				92A8CB281D5D243000023E42 /* AppDelegate.h */,
+				92A8CB291D5D243000023E42 /* AppDelegate.m */,
+				92A8CB2B1D5D243000023E42 /* ViewController.h */,
+				92A8CB2C1D5D243000023E42 /* ViewController.m */,
+				92A8CB2E1D5D243000023E42 /* Main.storyboard */,
+				92A8CB311D5D243100023E42 /* Assets.xcassets */,
+				92A8CB331D5D243100023E42 /* LaunchScreen.storyboard */,
+				92A8CB361D5D243100023E42 /* Info.plist */,
+				92A8CB251D5D243000023E42 /* Supporting Files */,
+			);
+			path = "Clinton or Trump";
+			sourceTree = "<group>";
+		};
+		92A8CB251D5D243000023E42 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				92A8CB261D5D243000023E42 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		92A8CB3E1D5D243300023E42 /* Clinton or TrumpTests */ = {
+			isa = PBXGroup;
+			children = (
+				92A8CB3F1D5D243300023E42 /* Clinton_or_TrumpTests.m */,
+				92A8CB411D5D243300023E42 /* Info.plist */,
+			);
+			path = "Clinton or TrumpTests";
+			sourceTree = "<group>";
+		};
+		92A8CB491D5D243300023E42 /* Clinton or TrumpUITests */ = {
+			isa = PBXGroup;
+			children = (
+				92A8CB4A1D5D243300023E42 /* Clinton_or_TrumpUITests.m */,
+				92A8CB4C1D5D243300023E42 /* Info.plist */,
+			);
+			path = "Clinton or TrumpUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		92A8CB211D5D242E00023E42 /* Clinton or Trump */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92A8CB4F1D5D243300023E42 /* Build configuration list for PBXNativeTarget "Clinton or Trump" */;
+			buildPhases = (
+				92A8CB1E1D5D242E00023E42 /* Sources */,
+				92A8CB1F1D5D242E00023E42 /* Frameworks */,
+				92A8CB201D5D242E00023E42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Clinton or Trump";
+			productName = "Clinton or Trump";
+			productReference = 92A8CB221D5D242F00023E42 /* Clinton or Trump.app */;
+			productType = "com.apple.product-type.application";
+		};
+		92A8CB3A1D5D243300023E42 /* Clinton or TrumpTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92A8CB521D5D243300023E42 /* Build configuration list for PBXNativeTarget "Clinton or TrumpTests" */;
+			buildPhases = (
+				92A8CB371D5D243300023E42 /* Sources */,
+				92A8CB381D5D243300023E42 /* Frameworks */,
+				92A8CB391D5D243300023E42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92A8CB3D1D5D243300023E42 /* PBXTargetDependency */,
+			);
+			name = "Clinton or TrumpTests";
+			productName = "Clinton or TrumpTests";
+			productReference = 92A8CB3B1D5D243300023E42 /* Clinton or TrumpTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		92A8CB451D5D243300023E42 /* Clinton or TrumpUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92A8CB551D5D243300023E42 /* Build configuration list for PBXNativeTarget "Clinton or TrumpUITests" */;
+			buildPhases = (
+				92A8CB421D5D243300023E42 /* Sources */,
+				92A8CB431D5D243300023E42 /* Frameworks */,
+				92A8CB441D5D243300023E42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92A8CB481D5D243300023E42 /* PBXTargetDependency */,
+			);
+			name = "Clinton or TrumpUITests";
+			productName = "Clinton or TrumpUITests";
+			productReference = 92A8CB461D5D243300023E42 /* Clinton or TrumpUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		92A8CB1A1D5D242E00023E42 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Jack Stenglein";
+				TargetAttributes = {
+					92A8CB211D5D242E00023E42 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 6AC6Y6LT37;
+					};
+					92A8CB3A1D5D243300023E42 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 92A8CB211D5D242E00023E42;
+					};
+					92A8CB451D5D243300023E42 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 92A8CB211D5D242E00023E42;
+					};
+				};
+			};
+			buildConfigurationList = 92A8CB1D1D5D242E00023E42 /* Build configuration list for PBXProject "Clinton or Trump" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 92A8CB191D5D242E00023E42;
+			productRefGroup = 92A8CB231D5D242F00023E42 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				92A8CB211D5D242E00023E42 /* Clinton or Trump */,
+				92A8CB3A1D5D243300023E42 /* Clinton or TrumpTests */,
+				92A8CB451D5D243300023E42 /* Clinton or TrumpUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		92A8CB201D5D242E00023E42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92A8CB351D5D243100023E42 /* LaunchScreen.storyboard in Resources */,
+				92A8CB321D5D243100023E42 /* Assets.xcassets in Resources */,
+				92A8CB301D5D243100023E42 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92A8CB391D5D243300023E42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92A8CB441D5D243300023E42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		92A8CB1E1D5D242E00023E42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92A8CB2D1D5D243000023E42 /* ViewController.m in Sources */,
+				92A8CB2A1D5D243000023E42 /* AppDelegate.m in Sources */,
+				92A8CB271D5D243000023E42 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92A8CB371D5D243300023E42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92A8CB401D5D243300023E42 /* Clinton_or_TrumpTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92A8CB421D5D243300023E42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92A8CB4B1D5D243300023E42 /* Clinton_or_TrumpUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		92A8CB3D1D5D243300023E42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92A8CB211D5D242E00023E42 /* Clinton or Trump */;
+			targetProxy = 92A8CB3C1D5D243300023E42 /* PBXContainerItemProxy */;
+		};
+		92A8CB481D5D243300023E42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92A8CB211D5D242E00023E42 /* Clinton or Trump */;
+			targetProxy = 92A8CB471D5D243300023E42 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		92A8CB2E1D5D243000023E42 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92A8CB2F1D5D243000023E42 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		92A8CB331D5D243100023E42 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92A8CB341D5D243100023E42 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		92A8CB4D1D5D243300023E42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		92A8CB4E1D5D243300023E42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		92A8CB501D5D243300023E42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Clinton or Trump/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JackStenglein.Clinton-or-Trump";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		92A8CB511D5D243300023E42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Clinton or Trump/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JackStenglein.Clinton-or-Trump";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		92A8CB531D5D243300023E42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Clinton or TrumpTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JackStenglein.Clinton-or-TrumpTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Clinton or Trump.app/Clinton or Trump";
+			};
+			name = Debug;
+		};
+		92A8CB541D5D243300023E42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Clinton or TrumpTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JackStenglein.Clinton-or-TrumpTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Clinton or Trump.app/Clinton or Trump";
+			};
+			name = Release;
+		};
+		92A8CB561D5D243300023E42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Clinton or TrumpUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JackStenglein.Clinton-or-TrumpUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Clinton or Trump";
+			};
+			name = Debug;
+		};
+		92A8CB571D5D243300023E42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Clinton or TrumpUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JackStenglein.Clinton-or-TrumpUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Clinton or Trump";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		92A8CB1D1D5D242E00023E42 /* Build configuration list for PBXProject "Clinton or Trump" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92A8CB4D1D5D243300023E42 /* Debug */,
+				92A8CB4E1D5D243300023E42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92A8CB4F1D5D243300023E42 /* Build configuration list for PBXNativeTarget "Clinton or Trump" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92A8CB501D5D243300023E42 /* Debug */,
+				92A8CB511D5D243300023E42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		92A8CB521D5D243300023E42 /* Build configuration list for PBXNativeTarget "Clinton or TrumpTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92A8CB531D5D243300023E42 /* Debug */,
+				92A8CB541D5D243300023E42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		92A8CB551D5D243300023E42 /* Build configuration list for PBXNativeTarget "Clinton or TrumpUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92A8CB561D5D243300023E42 /* Debug */,
+				92A8CB571D5D243300023E42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 92A8CB1A1D5D242E00023E42 /* Project object */;
+}
