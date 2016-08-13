@@ -17,6 +17,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    if( ![[NSUserDefaults standardUserDefaults] boolForKey:@"hasLaunchedBefore"] )
+    {
+        //This is first Launch of app, set all needed values
+
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"Audio"];
+        [[NSUserDefaults standardUserDefaults] setObject:@"Hard" forKey:@"Difficulty"];
+        [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"Hard High Score"];
+        [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"Easy High Score"];
+        [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"Mistakes on Clinton"];
+        [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"Mistakes on Trump"];
+    }
+    
+    [self authenticateLocalPlayer];
+    
+    
     return YES;
 }
 
@@ -40,6 +56,47 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+-(void)authenticateLocalPlayer{
+    NSLog(@"App Delegate Authenticate");
+    
+    GKLocalPlayer *localPlayer = [GKLocalPlayer localPlayer];
+    
+    localPlayer.authenticateHandler = ^(UIViewController *viewController, NSError *error){
+        if (viewController != nil) {
+            if( ![[NSUserDefaults standardUserDefaults] boolForKey:@"hasLaunchedBefore"] )
+            {
+                [self.window.rootViewController presentViewController:viewController animated:YES completion:nil];
+            }
+            else
+            {
+                _gameCenterEnabled = NO;
+            }
+        }
+        else{
+            if ([GKLocalPlayer localPlayer].authenticated)
+            {
+                _gameCenterEnabled = YES;
+                
+                // Get the default leaderboard identifier.
+                [[GKLocalPlayer localPlayer] loadDefaultLeaderboardIdentifierWithCompletionHandler:^(NSString *leaderboardIdentifier, NSError *error) {
+                    
+                    if (error != nil)
+                    {
+                        NSLog(@"Error: %@", [error localizedDescription]);
+                    }
+                    else{
+                        _leaderboardIdentifier = leaderboardIdentifier;
+                    }
+                }];
+            }
+            else
+            {
+                _gameCenterEnabled = NO;
+            }
+        }
+    };
 }
 
 @end
