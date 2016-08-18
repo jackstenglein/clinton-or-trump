@@ -9,17 +9,63 @@
 /* Begin PBXBuildFile section */
 		9208048E1D5E68D80012C472 /* SettingsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9208048D1D5E68D80012C472 /* SettingsCell.m */; };
 		920804901D5E90380012C472 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9208048F1D5E90380012C472 /* GameKit.framework */; };
+		92125F2D1D652D8000385D08 /* left-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 92125F2C1D652D8000385D08 /* left-arrow.png */; };
+		92125F2F1D65346500385D08 /* clintonflicker.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92125F2E1D65346500385D08 /* clintonflicker.jpg */; };
+		92125F311D65348000385D08 /* trump flicker.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92125F301D65348000385D08 /* trump flicker.jpg */; };
+		92125F371D654A4300385D08 /* clinton trump combined.png in Resources */ = {isa = PBXBuildFile; fileRef = 92125F361D654A4300385D08 /* clinton trump combined.png */; };
+		92125F391D65610200385D08 /* text.png in Resources */ = {isa = PBXBuildFile; fileRef = 92125F381D65610100385D08 /* text.png */; };
+		92125F3F1D65666000385D08 /* hometextblackwhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 92125F3B1D65666000385D08 /* hometextblackwhite.png */; };
+		92125F401D65666000385D08 /* hometextwhiteblack.png in Resources */ = {isa = PBXBuildFile; fileRef = 92125F3C1D65666000385D08 /* hometextwhiteblack.png */; };
+		92125F411D65666000385D08 /* hometextwhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 92125F3D1D65666000385D08 /* hometextwhite.png */; };
+		92125F421D65666000385D08 /* hometextblack.png in Resources */ = {isa = PBXBuildFile; fileRef = 92125F3E1D65666000385D08 /* hometextblack.png */; };
+		92125F441D656BA500385D08 /* clinton trump combined 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 92125F431D656BA500385D08 /* clinton trump combined 2.png */; };
 		924076481D5D44C700BC0BE9 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 924076471D5D44C700BC0BE9 /* GameViewController.m */; };
-		924076511D5D4AD400BC0BE9 /* clinton1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 924076491D5D4AD400BC0BE9 /* clinton1.jpg */; };
-		924076521D5D4AD400BC0BE9 /* clinton2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9240764A1D5D4AD400BC0BE9 /* clinton2.png */; };
-		924076531D5D4AD400BC0BE9 /* clinton3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 9240764B1D5D4AD400BC0BE9 /* clinton3.jpeg */; };
-		924076541D5D4AD400BC0BE9 /* clinton4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9240764C1D5D4AD400BC0BE9 /* clinton4.jpg */; };
-		924076551D5D4AD400BC0BE9 /* trump1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9240764D1D5D4AD400BC0BE9 /* trump1.jpg */; };
-		924076561D5D4AD400BC0BE9 /* trump2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9240764E1D5D4AD400BC0BE9 /* trump2.jpg */; };
-		924076571D5D4AD400BC0BE9 /* trump3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9240764F1D5D4AD400BC0BE9 /* trump3.jpg */; };
-		924076581D5D4AD400BC0BE9 /* trump4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 924076501D5D4AD400BC0BE9 /* trump4.jpg */; };
 		9240765B1D5D56F500BC0BE9 /* GameOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9240765A1D5D56F500BC0BE9 /* GameOverViewController.m */; };
 		9240765E1D5D573D00BC0BE9 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9240765D1D5D573D00BC0BE9 /* SettingsViewController.m */; };
+		927C48941D63D910002DE3E6 /* replay.png in Resources */ = {isa = PBXBuildFile; fileRef = 927C48921D63D910002DE3E6 /* replay.png */; };
+		927C48961D63D993002DE3E6 /* upload (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 927C48951D63D993002DE3E6 /* upload (1).png */; };
+		927C48981D63DAD7002DE3E6 /* home-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 927C48971D63DAD7002DE3E6 /* home-button.png */; };
+		927C489A1D63DADC002DE3E6 /* leaderboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 927C48991D63DADC002DE3E6 /* leaderboard.png */; };
+		927C48AE1D63ECE4002DE3E6 /* trump2sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C489E1D63ECE4002DE3E6 /* trump2sized.jpg */; };
+		927C48AF1D63ECE4002DE3E6 /* trump3sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C489F1D63ECE4002DE3E6 /* trump3sized.jpg */; };
+		927C48B01D63ECE4002DE3E6 /* trump4sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48A01D63ECE4002DE3E6 /* trump4sized.jpg */; };
+		927C48B11D63ECE4002DE3E6 /* trump5sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48A11D63ECE4002DE3E6 /* trump5sized.jpg */; };
+		927C48B21D63ECE4002DE3E6 /* trump6sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48A21D63ECE4002DE3E6 /* trump6sized.jpg */; };
+		927C48B31D63ECE4002DE3E6 /* trump7sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48A31D63ECE4002DE3E6 /* trump7sized.jpg */; };
+		927C48B41D63ECE4002DE3E6 /* trump8sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48A41D63ECE4002DE3E6 /* trump8sized.jpg */; };
+		927C48B51D63ECE4002DE3E6 /* trump9sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48A51D63ECE4002DE3E6 /* trump9sized.jpg */; };
+		927C48B61D63ECE4002DE3E6 /* trump10sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48A61D63ECE4002DE3E6 /* trump10sized.jpg */; };
+		927C48B81D63ECE4002DE3E6 /* trump12sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48A81D63ECE4002DE3E6 /* trump12sized.jpg */; };
+		927C48B91D63ECE4002DE3E6 /* trump13sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48A91D63ECE4002DE3E6 /* trump13sized.jpg */; };
+		927C48BA1D63ECE4002DE3E6 /* trump14sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48AA1D63ECE4002DE3E6 /* trump14sized.jpg */; };
+		927C48BB1D63ECE4002DE3E6 /* trump15sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48AB1D63ECE4002DE3E6 /* trump15sized.jpg */; };
+		927C48BC1D63ECE4002DE3E6 /* trump16sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48AC1D63ECE4002DE3E6 /* trump16sized.jpg */; };
+		927C48BF1D63F1FF002DE3E6 /* trump1sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48BD1D63F1FF002DE3E6 /* trump1sized.jpg */; };
+		927C48C01D63F1FF002DE3E6 /* trump11sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48BE1D63F1FF002DE3E6 /* trump11sized.jpg */; };
+		927C48D11D640749002DE3E6 /* clinton1sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48C11D640749002DE3E6 /* clinton1sized.jpg */; };
+		927C48D21D640749002DE3E6 /* clinton2sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48C21D640749002DE3E6 /* clinton2sized.jpg */; };
+		927C48D31D640749002DE3E6 /* clinton3sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48C31D640749002DE3E6 /* clinton3sized.jpg */; };
+		927C48D51D640749002DE3E6 /* clinton5sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48C51D640749002DE3E6 /* clinton5sized.jpg */; };
+		927C48D61D640749002DE3E6 /* clinton6sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48C61D640749002DE3E6 /* clinton6sized.jpg */; };
+		927C48D81D640749002DE3E6 /* clinton8sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48C81D640749002DE3E6 /* clinton8sized.jpg */; };
+		927C48D91D640749002DE3E6 /* clinton9sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48C91D640749002DE3E6 /* clinton9sized.jpg */; };
+		927C48DA1D640749002DE3E6 /* clinton10sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48CA1D640749002DE3E6 /* clinton10sized.jpg */; };
+		927C48DB1D640749002DE3E6 /* clinton11sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48CB1D640749002DE3E6 /* clinton11sized.jpg */; };
+		927C48DC1D640749002DE3E6 /* clinton12sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48CC1D640749002DE3E6 /* clinton12sized.jpg */; };
+		927C48DE1D640749002DE3E6 /* clinton14sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48CE1D640749002DE3E6 /* clinton14sized.jpg */; };
+		927C48E01D640749002DE3E6 /* clinton16sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48D01D640749002DE3E6 /* clinton16sized.jpg */; };
+		927C48E41D6409AA002DE3E6 /* clinton15sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48E11D6409AA002DE3E6 /* clinton15sized.jpg */; };
+		927C48E51D6409AA002DE3E6 /* clinton7sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48E21D6409AA002DE3E6 /* clinton7sized.jpg */; };
+		927C48E61D6409AA002DE3E6 /* clinton4sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48E31D6409AA002DE3E6 /* clinton4sized.jpg */; };
+		927C48E81D640AEB002DE3E6 /* clinton13sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48E71D640AEB002DE3E6 /* clinton13sized.jpg */; };
+		927C48F41D6415AF002DE3E6 /* johnson1sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48EC1D6415AF002DE3E6 /* johnson1sized.jpg */; };
+		927C48F51D6415AF002DE3E6 /* johnson2sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48ED1D6415AF002DE3E6 /* johnson2sized.jpg */; };
+		927C48F61D6415AF002DE3E6 /* johnson3sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48EE1D6415AF002DE3E6 /* johnson3sized.jpg */; };
+		927C48F71D6415AF002DE3E6 /* johnson4sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48EF1D6415AF002DE3E6 /* johnson4sized.jpg */; };
+		927C48F81D6415AF002DE3E6 /* stein1sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48F01D6415AF002DE3E6 /* stein1sized.jpg */; };
+		927C48F91D6415AF002DE3E6 /* stein2sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48F11D6415AF002DE3E6 /* stein2sized.jpg */; };
+		927C48FA1D6415AF002DE3E6 /* stein3sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48F21D6415AF002DE3E6 /* stein3sized.jpg */; };
+		927C48FB1D6415AF002DE3E6 /* stein4sized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927C48F31D6415AF002DE3E6 /* stein4sized.jpg */; };
 		92A8CB271D5D243000023E42 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A8CB261D5D243000023E42 /* main.m */; };
 		92A8CB2A1D5D243000023E42 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A8CB291D5D243000023E42 /* AppDelegate.m */; };
 		92A8CB301D5D243100023E42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92A8CB2E1D5D243000023E42 /* Main.storyboard */; };
@@ -54,20 +100,66 @@
 		9208048C1D5E68D80012C472 /* SettingsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsCell.h; sourceTree = "<group>"; };
 		9208048D1D5E68D80012C472 /* SettingsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsCell.m; sourceTree = "<group>"; };
 		9208048F1D5E90380012C472 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		92125F2C1D652D8000385D08 /* left-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-arrow.png"; sourceTree = "<group>"; };
+		92125F2E1D65346500385D08 /* clintonflicker.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = clintonflicker.jpg; sourceTree = "<group>"; };
+		92125F301D65348000385D08 /* trump flicker.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "trump flicker.jpg"; sourceTree = "<group>"; };
+		92125F361D654A4300385D08 /* clinton trump combined.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clinton trump combined.png"; sourceTree = "<group>"; };
+		92125F381D65610100385D08 /* text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = text.png; sourceTree = "<group>"; };
+		92125F3B1D65666000385D08 /* hometextblackwhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hometextblackwhite.png; sourceTree = "<group>"; };
+		92125F3C1D65666000385D08 /* hometextwhiteblack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hometextwhiteblack.png; sourceTree = "<group>"; };
+		92125F3D1D65666000385D08 /* hometextwhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hometextwhite.png; sourceTree = "<group>"; };
+		92125F3E1D65666000385D08 /* hometextblack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hometextblack.png; sourceTree = "<group>"; };
+		92125F431D656BA500385D08 /* clinton trump combined 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clinton trump combined 2.png"; sourceTree = "<group>"; };
 		924076461D5D44C700BC0BE9 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		924076471D5D44C700BC0BE9 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
-		924076491D5D4AD400BC0BE9 /* clinton1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = clinton1.jpg; sourceTree = "<group>"; };
-		9240764A1D5D4AD400BC0BE9 /* clinton2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clinton2.png; sourceTree = "<group>"; };
-		9240764B1D5D4AD400BC0BE9 /* clinton3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = clinton3.jpeg; sourceTree = "<group>"; };
-		9240764C1D5D4AD400BC0BE9 /* clinton4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = clinton4.jpg; sourceTree = "<group>"; };
-		9240764D1D5D4AD400BC0BE9 /* trump1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trump1.jpg; sourceTree = "<group>"; };
-		9240764E1D5D4AD400BC0BE9 /* trump2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trump2.jpg; sourceTree = "<group>"; };
-		9240764F1D5D4AD400BC0BE9 /* trump3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trump3.jpg; sourceTree = "<group>"; };
-		924076501D5D4AD400BC0BE9 /* trump4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trump4.jpg; sourceTree = "<group>"; };
 		924076591D5D56F500BC0BE9 /* GameOverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverViewController.h; sourceTree = "<group>"; };
 		9240765A1D5D56F500BC0BE9 /* GameOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverViewController.m; sourceTree = "<group>"; };
 		9240765C1D5D573D00BC0BE9 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		9240765D1D5D573D00BC0BE9 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		927C48921D63D910002DE3E6 /* replay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = replay.png; sourceTree = "<group>"; };
+		927C48951D63D993002DE3E6 /* upload (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "upload (1).png"; sourceTree = "<group>"; };
+		927C48971D63DAD7002DE3E6 /* home-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-button.png"; sourceTree = "<group>"; };
+		927C48991D63DADC002DE3E6 /* leaderboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leaderboard.png; sourceTree = "<group>"; };
+		927C489E1D63ECE4002DE3E6 /* trump2sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trump2sized.jpg; sourceTree = "<group>"; };
+		927C489F1D63ECE4002DE3E6 /* trump3sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trump3sized.jpg; sourceTree = "<group>"; };
+		927C48A01D63ECE4002DE3E6 /* trump4sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trump4sized.jpg; sourceTree = "<group>"; };
+		927C48A11D63ECE4002DE3E6 /* trump5sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trump5sized.jpg; sourceTree = "<group>"; };
+		927C48A21D63ECE4002DE3E6 /* trump6sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trump6sized.jpg; sourceTree = "<group>"; };
+		927C48A31D63ECE4002DE3E6 /* trump7sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trump7sized.jpg; sourceTree = "<group>"; };
+		927C48A41D63ECE4002DE3E6 /* trump8sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trump8sized.jpg; sourceTree = "<group>"; };
+		927C48A51D63ECE4002DE3E6 /* trump9sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trump9sized.jpg; sourceTree = "<group>"; };
+		927C48A61D63ECE4002DE3E6 /* trump10sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trump10sized.jpg; sourceTree = "<group>"; };
+		927C48A81D63ECE4002DE3E6 /* trump12sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trump12sized.jpg; sourceTree = "<group>"; };
+		927C48A91D63ECE4002DE3E6 /* trump13sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trump13sized.jpg; sourceTree = "<group>"; };
+		927C48AA1D63ECE4002DE3E6 /* trump14sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trump14sized.jpg; sourceTree = "<group>"; };
+		927C48AB1D63ECE4002DE3E6 /* trump15sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trump15sized.jpg; sourceTree = "<group>"; };
+		927C48AC1D63ECE4002DE3E6 /* trump16sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trump16sized.jpg; sourceTree = "<group>"; };
+		927C48BD1D63F1FF002DE3E6 /* trump1sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trump1sized.jpg; sourceTree = "<group>"; };
+		927C48BE1D63F1FF002DE3E6 /* trump11sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trump11sized.jpg; sourceTree = "<group>"; };
+		927C48C11D640749002DE3E6 /* clinton1sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = clinton1sized.jpg; sourceTree = "<group>"; };
+		927C48C21D640749002DE3E6 /* clinton2sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = clinton2sized.jpg; sourceTree = "<group>"; };
+		927C48C31D640749002DE3E6 /* clinton3sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = clinton3sized.jpg; sourceTree = "<group>"; };
+		927C48C51D640749002DE3E6 /* clinton5sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = clinton5sized.jpg; sourceTree = "<group>"; };
+		927C48C61D640749002DE3E6 /* clinton6sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = clinton6sized.jpg; sourceTree = "<group>"; };
+		927C48C81D640749002DE3E6 /* clinton8sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = clinton8sized.jpg; sourceTree = "<group>"; };
+		927C48C91D640749002DE3E6 /* clinton9sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = clinton9sized.jpg; sourceTree = "<group>"; };
+		927C48CA1D640749002DE3E6 /* clinton10sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = clinton10sized.jpg; sourceTree = "<group>"; };
+		927C48CB1D640749002DE3E6 /* clinton11sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = clinton11sized.jpg; sourceTree = "<group>"; };
+		927C48CC1D640749002DE3E6 /* clinton12sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = clinton12sized.jpg; sourceTree = "<group>"; };
+		927C48CE1D640749002DE3E6 /* clinton14sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = clinton14sized.jpg; sourceTree = "<group>"; };
+		927C48D01D640749002DE3E6 /* clinton16sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = clinton16sized.jpg; sourceTree = "<group>"; };
+		927C48E11D6409AA002DE3E6 /* clinton15sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = clinton15sized.jpg; sourceTree = "<group>"; };
+		927C48E21D6409AA002DE3E6 /* clinton7sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = clinton7sized.jpg; sourceTree = "<group>"; };
+		927C48E31D6409AA002DE3E6 /* clinton4sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = clinton4sized.jpg; sourceTree = "<group>"; };
+		927C48E71D640AEB002DE3E6 /* clinton13sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = clinton13sized.jpg; sourceTree = "<group>"; };
+		927C48EC1D6415AF002DE3E6 /* johnson1sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = johnson1sized.jpg; sourceTree = "<group>"; };
+		927C48ED1D6415AF002DE3E6 /* johnson2sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = johnson2sized.jpg; sourceTree = "<group>"; };
+		927C48EE1D6415AF002DE3E6 /* johnson3sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = johnson3sized.jpg; sourceTree = "<group>"; };
+		927C48EF1D6415AF002DE3E6 /* johnson4sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = johnson4sized.jpg; sourceTree = "<group>"; };
+		927C48F01D6415AF002DE3E6 /* stein1sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stein1sized.jpg; sourceTree = "<group>"; };
+		927C48F11D6415AF002DE3E6 /* stein2sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stein2sized.jpg; sourceTree = "<group>"; };
+		927C48F21D6415AF002DE3E6 /* stein3sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stein3sized.jpg; sourceTree = "<group>"; };
+		927C48F31D6415AF002DE3E6 /* stein4sized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stein4sized.jpg; sourceTree = "<group>"; };
 		92A8CB221D5D242F00023E42 /* Clinton or Trump.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clinton or Trump.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A8CB261D5D243000023E42 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		92A8CB281D5D243000023E42 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -82,7 +174,7 @@
 		92A8CB461D5D243300023E42 /* Clinton or TrumpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Clinton or TrumpUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A8CB4A1D5D243300023E42 /* Clinton_or_TrumpUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Clinton_or_TrumpUITests.m; sourceTree = "<group>"; };
 		92A8CB4C1D5D243300023E42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		92A8CB5C1D5D2E5D00023E42 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		92A8CB5C1D5D2E5D00023E42 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = ../GoogleMobileAds.framework; sourceTree = "<group>"; };
 		92A8CB651D5D312100023E42 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		92A8CB661D5D312100023E42 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,11 +208,92 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		92125F3A1D65612100385D08 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				92125F3B1D65666000385D08 /* hometextblackwhite.png */,
+				92125F3C1D65666000385D08 /* hometextwhiteblack.png */,
+				92125F3D1D65666000385D08 /* hometextwhite.png */,
+				92125F3E1D65666000385D08 /* hometextblack.png */,
+				92125F431D656BA500385D08 /* clinton trump combined 2.png */,
+				927C48991D63DADC002DE3E6 /* leaderboard.png */,
+				92125F2C1D652D8000385D08 /* left-arrow.png */,
+				92125F381D65610100385D08 /* text.png */,
+				92125F361D654A4300385D08 /* clinton trump combined.png */,
+				927C48971D63DAD7002DE3E6 /* home-button.png */,
+				927C48951D63D993002DE3E6 /* upload (1).png */,
+				927C48921D63D910002DE3E6 /* replay.png */,
+			);
+			name = "User Interface";
+			sourceTree = "<group>";
+		};
+		927C48E91D64155D002DE3E6 /* Trump */ = {
+			isa = PBXGroup;
+			children = (
+				92125F301D65348000385D08 /* trump flicker.jpg */,
+				927C48BD1D63F1FF002DE3E6 /* trump1sized.jpg */,
+				927C489E1D63ECE4002DE3E6 /* trump2sized.jpg */,
+				927C489F1D63ECE4002DE3E6 /* trump3sized.jpg */,
+				927C48A01D63ECE4002DE3E6 /* trump4sized.jpg */,
+				927C48A11D63ECE4002DE3E6 /* trump5sized.jpg */,
+				927C48A21D63ECE4002DE3E6 /* trump6sized.jpg */,
+				927C48A31D63ECE4002DE3E6 /* trump7sized.jpg */,
+				927C48A41D63ECE4002DE3E6 /* trump8sized.jpg */,
+				927C48A51D63ECE4002DE3E6 /* trump9sized.jpg */,
+				927C48A61D63ECE4002DE3E6 /* trump10sized.jpg */,
+				927C48BE1D63F1FF002DE3E6 /* trump11sized.jpg */,
+				927C48A81D63ECE4002DE3E6 /* trump12sized.jpg */,
+				927C48A91D63ECE4002DE3E6 /* trump13sized.jpg */,
+				927C48AA1D63ECE4002DE3E6 /* trump14sized.jpg */,
+				927C48AB1D63ECE4002DE3E6 /* trump15sized.jpg */,
+				927C48AC1D63ECE4002DE3E6 /* trump16sized.jpg */,
+			);
+			name = Trump;
+			sourceTree = "<group>";
+		};
+		927C48EA1D64158E002DE3E6 /* Clinton */ = {
+			isa = PBXGroup;
+			children = (
+				92125F2E1D65346500385D08 /* clintonflicker.jpg */,
+				927C48C11D640749002DE3E6 /* clinton1sized.jpg */,
+				927C48C21D640749002DE3E6 /* clinton2sized.jpg */,
+				927C48C31D640749002DE3E6 /* clinton3sized.jpg */,
+				927C48E31D6409AA002DE3E6 /* clinton4sized.jpg */,
+				927C48C51D640749002DE3E6 /* clinton5sized.jpg */,
+				927C48C61D640749002DE3E6 /* clinton6sized.jpg */,
+				927C48E21D6409AA002DE3E6 /* clinton7sized.jpg */,
+				927C48C81D640749002DE3E6 /* clinton8sized.jpg */,
+				927C48C91D640749002DE3E6 /* clinton9sized.jpg */,
+				927C48CA1D640749002DE3E6 /* clinton10sized.jpg */,
+				927C48CB1D640749002DE3E6 /* clinton11sized.jpg */,
+				927C48CC1D640749002DE3E6 /* clinton12sized.jpg */,
+				927C48E71D640AEB002DE3E6 /* clinton13sized.jpg */,
+				927C48CE1D640749002DE3E6 /* clinton14sized.jpg */,
+				927C48E11D6409AA002DE3E6 /* clinton15sized.jpg */,
+				927C48D01D640749002DE3E6 /* clinton16sized.jpg */,
+			);
+			name = Clinton;
+			sourceTree = "<group>";
+		};
+		927C48EB1D6415A0002DE3E6 /* Third Party */ = {
+			isa = PBXGroup;
+			children = (
+				927C48EC1D6415AF002DE3E6 /* johnson1sized.jpg */,
+				927C48ED1D6415AF002DE3E6 /* johnson2sized.jpg */,
+				927C48EE1D6415AF002DE3E6 /* johnson3sized.jpg */,
+				927C48EF1D6415AF002DE3E6 /* johnson4sized.jpg */,
+				927C48F01D6415AF002DE3E6 /* stein1sized.jpg */,
+				927C48F11D6415AF002DE3E6 /* stein2sized.jpg */,
+				927C48F21D6415AF002DE3E6 /* stein3sized.jpg */,
+				927C48F31D6415AF002DE3E6 /* stein4sized.jpg */,
+			);
+			name = "Third Party";
+			sourceTree = "<group>";
+		};
 		92A8CB191D5D242E00023E42 = {
 			isa = PBXGroup;
 			children = (
-				9208048F1D5E90380012C472 /* GameKit.framework */,
-				92A8CB5C1D5D2E5D00023E42 /* GoogleMobileAds.framework */,
+				92FCAD641D628ADA00CA7482 /* Frameworks */,
 				92A8CB241D5D243000023E42 /* Clinton or Trump */,
 				92A8CB3E1D5D243300023E42 /* Clinton or TrumpTests */,
 				92A8CB491D5D243300023E42 /* Clinton or TrumpUITests */,
@@ -155,14 +328,10 @@
 				92A8CB661D5D312100023E42 /* HomeViewController.m */,
 				92A8CB2E1D5D243000023E42 /* Main.storyboard */,
 				92A8CB311D5D243100023E42 /* Assets.xcassets */,
-				924076491D5D4AD400BC0BE9 /* clinton1.jpg */,
-				9240764A1D5D4AD400BC0BE9 /* clinton2.png */,
-				9240764B1D5D4AD400BC0BE9 /* clinton3.jpeg */,
-				9240764C1D5D4AD400BC0BE9 /* clinton4.jpg */,
-				9240764D1D5D4AD400BC0BE9 /* trump1.jpg */,
-				9240764E1D5D4AD400BC0BE9 /* trump2.jpg */,
-				9240764F1D5D4AD400BC0BE9 /* trump3.jpg */,
-				924076501D5D4AD400BC0BE9 /* trump4.jpg */,
+				927C48E91D64155D002DE3E6 /* Trump */,
+				927C48EA1D64158E002DE3E6 /* Clinton */,
+				927C48EB1D6415A0002DE3E6 /* Third Party */,
+				92125F3A1D65612100385D08 /* User Interface */,
 				92A8CB331D5D243100023E42 /* LaunchScreen.storyboard */,
 				92A8CB361D5D243100023E42 /* Info.plist */,
 				92A8CB251D5D243000023E42 /* Supporting Files */,
@@ -194,6 +363,16 @@
 				92A8CB4C1D5D243300023E42 /* Info.plist */,
 			);
 			path = "Clinton or TrumpUITests";
+			sourceTree = "<group>";
+		};
+		92FCAD641D628ADA00CA7482 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9208048F1D5E90380012C472 /* GameKit.framework */,
+				92A8CB5C1D5D2E5D00023E42 /* GoogleMobileAds.framework */,
+			);
+			name = Frameworks;
+			path = "Clinton or Trump";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,17 +484,63 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				924076571D5D4AD400BC0BE9 /* trump3.jpg in Resources */,
-				924076581D5D4AD400BC0BE9 /* trump4.jpg in Resources */,
-				924076561D5D4AD400BC0BE9 /* trump2.jpg in Resources */,
-				924076541D5D4AD400BC0BE9 /* clinton4.jpg in Resources */,
+				927C48B41D63ECE4002DE3E6 /* trump8sized.jpg in Resources */,
+				927C48961D63D993002DE3E6 /* upload (1).png in Resources */,
+				927C48981D63DAD7002DE3E6 /* home-button.png in Resources */,
+				927C48DA1D640749002DE3E6 /* clinton10sized.jpg in Resources */,
+				927C48BA1D63ECE4002DE3E6 /* trump14sized.jpg in Resources */,
+				92125F2F1D65346500385D08 /* clintonflicker.jpg in Resources */,
+				927C48BF1D63F1FF002DE3E6 /* trump1sized.jpg in Resources */,
 				92A8CB351D5D243100023E42 /* LaunchScreen.storyboard in Resources */,
-				924076551D5D4AD400BC0BE9 /* trump1.jpg in Resources */,
+				92125F391D65610200385D08 /* text.png in Resources */,
+				92125F401D65666000385D08 /* hometextwhiteblack.png in Resources */,
+				927C48BC1D63ECE4002DE3E6 /* trump16sized.jpg in Resources */,
+				927C48E41D6409AA002DE3E6 /* clinton15sized.jpg in Resources */,
+				927C48F81D6415AF002DE3E6 /* stein1sized.jpg in Resources */,
+				927C48F61D6415AF002DE3E6 /* johnson3sized.jpg in Resources */,
+				927C48F71D6415AF002DE3E6 /* johnson4sized.jpg in Resources */,
+				927C48D91D640749002DE3E6 /* clinton9sized.jpg in Resources */,
+				927C48AF1D63ECE4002DE3E6 /* trump3sized.jpg in Resources */,
+				927C48FB1D6415AF002DE3E6 /* stein4sized.jpg in Resources */,
+				92125F371D654A4300385D08 /* clinton trump combined.png in Resources */,
+				92125F441D656BA500385D08 /* clinton trump combined 2.png in Resources */,
+				92125F311D65348000385D08 /* trump flicker.jpg in Resources */,
+				927C48DB1D640749002DE3E6 /* clinton11sized.jpg in Resources */,
+				927C48B61D63ECE4002DE3E6 /* trump10sized.jpg in Resources */,
+				927C48E51D6409AA002DE3E6 /* clinton7sized.jpg in Resources */,
+				92125F421D65666000385D08 /* hometextblack.png in Resources */,
+				927C48B31D63ECE4002DE3E6 /* trump7sized.jpg in Resources */,
+				927C48D51D640749002DE3E6 /* clinton5sized.jpg in Resources */,
+				92125F2D1D652D8000385D08 /* left-arrow.png in Resources */,
+				927C48B01D63ECE4002DE3E6 /* trump4sized.jpg in Resources */,
+				927C48D31D640749002DE3E6 /* clinton3sized.jpg in Resources */,
+				927C48FA1D6415AF002DE3E6 /* stein3sized.jpg in Resources */,
+				927C48DE1D640749002DE3E6 /* clinton14sized.jpg in Resources */,
+				927C48B11D63ECE4002DE3E6 /* trump5sized.jpg in Resources */,
 				92A8CB321D5D243100023E42 /* Assets.xcassets in Resources */,
-				924076521D5D4AD400BC0BE9 /* clinton2.png in Resources */,
-				924076531D5D4AD400BC0BE9 /* clinton3.jpeg in Resources */,
+				927C48BB1D63ECE4002DE3E6 /* trump15sized.jpg in Resources */,
+				927C48D11D640749002DE3E6 /* clinton1sized.jpg in Resources */,
+				927C48AE1D63ECE4002DE3E6 /* trump2sized.jpg in Resources */,
+				927C48B21D63ECE4002DE3E6 /* trump6sized.jpg in Resources */,
+				92125F411D65666000385D08 /* hometextwhite.png in Resources */,
+				927C48DC1D640749002DE3E6 /* clinton12sized.jpg in Resources */,
+				927C48F51D6415AF002DE3E6 /* johnson2sized.jpg in Resources */,
+				927C48941D63D910002DE3E6 /* replay.png in Resources */,
+				927C48D81D640749002DE3E6 /* clinton8sized.jpg in Resources */,
+				927C48C01D63F1FF002DE3E6 /* trump11sized.jpg in Resources */,
+				927C48B81D63ECE4002DE3E6 /* trump12sized.jpg in Resources */,
+				927C48D61D640749002DE3E6 /* clinton6sized.jpg in Resources */,
+				927C48F41D6415AF002DE3E6 /* johnson1sized.jpg in Resources */,
+				927C48F91D6415AF002DE3E6 /* stein2sized.jpg in Resources */,
 				92A8CB301D5D243100023E42 /* Main.storyboard in Resources */,
-				924076511D5D4AD400BC0BE9 /* clinton1.jpg in Resources */,
+				927C48E61D6409AA002DE3E6 /* clinton4sized.jpg in Resources */,
+				927C48D21D640749002DE3E6 /* clinton2sized.jpg in Resources */,
+				92125F3F1D65666000385D08 /* hometextblackwhite.png in Resources */,
+				927C48E81D640AEB002DE3E6 /* clinton13sized.jpg in Resources */,
+				927C48B51D63ECE4002DE3E6 /* trump9sized.jpg in Resources */,
+				927C489A1D63DADC002DE3E6 /* leaderboard.png in Resources */,
+				927C48E01D640749002DE3E6 /* clinton16sized.jpg in Resources */,
+				927C48B91D63ECE4002DE3E6 /* trump13sized.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +718,12 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Clinton",
+					or,
+					Trump,
+					"$(PROJECT_DIR)/Clinton",
+					or,
+					Trump,
 				);
 				INFOPLIST_FILE = "Clinton or Trump/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -509,6 +740,12 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Clinton",
+					or,
+					Trump,
+					"$(PROJECT_DIR)/Clinton",
+					or,
+					Trump,
 				);
 				INFOPLIST_FILE = "Clinton or Trump/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

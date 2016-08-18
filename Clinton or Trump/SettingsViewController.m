@@ -23,8 +23,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    titleLabels = [[NSArray alloc] initWithObjects:@"Audio",@"Difficulty",@"Hard High Score",@"Easy High Score",@"Mistakes on Clinton",@"Mistakes on Trump",@"Remove Ads",@"Contact Us", nil];
+    int image = arc4random_uniform(2);
     
+    if(image == 0)
+    {
+        [self.imageView setImage:[UIImage imageNamed:@"clinton7sized.jpg"]];
+    }
+    else if(image == 1)
+    {
+        [self.imageView setImage:[UIImage imageNamed:@"trump14sized.jpg"]];
+    }
+    
+    titleLabels = [[NSArray alloc] initWithObjects:@"Audio",@"Difficulty",@"Hard High Score",@"Easy High Score",@"Total Mistakes",@"Remove Ads",@"Contact Us", nil];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 }
 
@@ -66,10 +76,10 @@
         case 1: //difficult row
             cell.valueLabel.text = [[NSUserDefaults standardUserDefaults] objectForKey:[titleLabels objectAtIndex:row]];
             break;
-        case 6: //remove ads row
+        case 5: //remove ads row
             cell.valueLabel.hidden = YES;
             break;
-        case 7: //contact row
+        case 6: //contact row
             cell.valueLabel.hidden = YES;
             break;
         default:
@@ -82,8 +92,10 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    int row = (int)indexPath.row;
     
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    int row = (int)indexPath.row;
     switch(row)
     {
         case 0: //audio row
@@ -99,15 +111,12 @@
             [self deleteStat:@"Easy High Score"];
             break;
         case 4:
-            [self deleteStat:@"Mistakes on Clinton"];
+            [self deleteStat:@"Total Mistakes"];
             break;
         case 5:
-            [self deleteStat:@"Mistakes on Trump"];
-            break;
-        case 6:
             [self removeAds];
             break;
-        case 7:
+        case 6:
             [self contactUs];
             break;
         
@@ -209,7 +218,6 @@
             break;
     }
 }
-
 
 - (IBAction)back:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];

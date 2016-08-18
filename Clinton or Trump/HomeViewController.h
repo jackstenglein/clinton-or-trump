@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "GameViewController.h"
-#import "GameOverViewController.h"
 @import GoogleMobileAds;
 @import GameKit;
 
-@interface HomeViewController : UIViewController <GADInterstitialDelegate, GameViewControllerDelegate, GameOverViewControllerDelegate, GKGameCenterControllerDelegate>
+@interface HomeViewController : UIViewController <GADInterstitialDelegate, GameViewControllerDelegate, GKGameCenterControllerDelegate>
 @property(nonatomic, strong) GADInterstitial *interstitial;
 - (IBAction)showGameCenter:(id)sender;
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+
+
 @end

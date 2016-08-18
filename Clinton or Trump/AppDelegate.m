@@ -14,24 +14,23 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
     if( ![[NSUserDefaults standardUserDefaults] boolForKey:@"hasLaunchedBefore"] )
     {
         //This is first Launch of app, set all needed values
-
+        NSLog(@"First launch");
+        
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"hasLaunchedBefore"];
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"Audio"];
         [[NSUserDefaults standardUserDefaults] setObject:@"Hard" forKey:@"Difficulty"];
         [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"Hard High Score"];
         [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"Easy High Score"];
-        [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"Mistakes on Clinton"];
-        [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"Mistakes on Trump"];
+        [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"Total Mistakes"];
     }
     
     [self authenticateLocalPlayer];
-    
     
     return YES;
 }

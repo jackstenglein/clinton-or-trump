@@ -12,5 +12,6 @@
 @interface SettingsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource,MFMailComposeViewControllerDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 - (IBAction)back:(id)sender;
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
 
 @end

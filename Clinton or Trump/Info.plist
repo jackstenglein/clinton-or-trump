@@ -44,5 +44,26 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbauth2</string>
+		<string>fb</string>
+		<string>fbapi</string>
+		<string>fbshareextension</string>
+	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb797321877036572</string>
+				<string>fb</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>797321877036572</string>
+	<key>FacebookDisplayName</key>
+	<string>Clinton or Trump</string>
 </dict>
 </plist>

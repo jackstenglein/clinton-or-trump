@@ -17,6 +17,7 @@
 {
     int gamesPlayed;
     AppDelegate *appDelegate;
+    BOOL animate;
 }
 
 - (void)viewDidLoad {
@@ -25,6 +26,24 @@
     gamesPlayed = 0;
     appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [self loadInterstitialAds];
+    
+    self.imageView.alpha = 0.0f;
+    animate = YES;
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    if(animate)
+    {
+        [UIView animateWithDuration:1.5
+                              delay:0.0
+                            options:UIViewAnimationOptionCurveEaseInOut
+                         animations:^{
+                             self.imageView.alpha = 1.0f;
+                         }
+                         completion:^(BOOL finished){
+                             // Do nothing
+                         }];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,13 +74,14 @@
 }
 //END AD METHODS
 
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    if([[segue identifier] isEqualToString:@"showGameVC"])
+    if( [[segue identifier] isEqualToString:@"showGameVC"] )
     {
         GameViewController *gameVC = [segue destinationViewController];
         [gameVC setDelegate:self];
@@ -83,8 +103,11 @@
 }
 
 -(void)gameDidEnd{
+    
     gamesPlayed++;
-    [self dismissViewControllerAnimated:NO completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    NSLog(@"Games played %d", gamesPlayed);
     
     if(gamesPlayed >= 3)
     {
@@ -92,10 +115,10 @@
         [self showInterstitial];
     }
     
-}
-
--(void)returnToHome{
-    [self dismissViewControllerAnimated:NO completion:nil];
+    int totalMistakes = (int)[[NSUserDefaults standardUserDefaults] integerForKey:@"Total Mistakes"];
+    totalMistakes++;
+    [[NSUserDefaults standardUserDefaults] setInteger:totalMistakes forKey:@"Total Mistakes"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 //GAME CENTER METHODS
