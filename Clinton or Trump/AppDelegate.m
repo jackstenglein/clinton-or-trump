@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Firebase.h"//;
 
 @interface AppDelegate ()
 
@@ -23,12 +24,18 @@
         NSLog(@"First launch");
         
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"hasLaunchedBefore"];
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"Audio"];
+        //[[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"Audio"];
         [[NSUserDefaults standardUserDefaults] setObject:@"Hard" forKey:@"Difficulty"];
         [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"Hard High Score"];
         [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"Easy High Score"];
         [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"Total Mistakes"];
     }
+    
+    self.removeAdsPurchased = [[NSUserDefaults standardUserDefaults] boolForKey:@"removeAdsPurchased"];
+    if(self.removeAdsPurchased)
+        NSLog(@"Remove ads purchased");
+    else
+        NSLog(@"Remove ads not purchased");
     
     [self authenticateLocalPlayer];
     

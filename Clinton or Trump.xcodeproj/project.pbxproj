@@ -19,9 +19,18 @@
 		92125F411D65666000385D08 /* hometextwhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 92125F3D1D65666000385D08 /* hometextwhite.png */; };
 		92125F421D65666000385D08 /* hometextblack.png in Resources */ = {isa = PBXBuildFile; fileRef = 92125F3E1D65666000385D08 /* hometextblack.png */; };
 		92125F441D656BA500385D08 /* clinton trump combined 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 92125F431D656BA500385D08 /* clinton trump combined 2.png */; };
+		9224F3661D9B673A009A0208 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9224F3641D9B6378009A0208 /* StoreKit.framework */; };
+		922D5FB51D662E7C00A8AD4B /* play-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 922D5FB41D662E7C00A8AD4B /* play-button.png */; };
+		922D5FB91D662FE300A8AD4B /* settings (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 922D5FB81D662FE300A8AD4B /* settings (1).png */; };
+		923481A41D9649B200CCC6DE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923481A31D9649B100CCC6DE /* AVFoundation.framework */; };
 		924076481D5D44C700BC0BE9 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 924076471D5D44C700BC0BE9 /* GameViewController.m */; };
-		9240765B1D5D56F500BC0BE9 /* GameOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9240765A1D5D56F500BC0BE9 /* GameOverViewController.m */; };
 		9240765E1D5D573D00BC0BE9 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9240765D1D5D573D00BC0BE9 /* SettingsViewController.m */; };
+		9256ED461DA094DA0076BDA1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9256ED451DA094DA0076BDA1 /* GoogleService-Info.plist */; };
+		9256ED471DA094DA0076BDA1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9256ED451DA094DA0076BDA1 /* GoogleService-Info.plist */; };
+		9256ED481DA094DA0076BDA1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9256ED451DA094DA0076BDA1 /* GoogleService-Info.plist */; };
+		9256ED4A1DA097A50076BDA1 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9256ED491DA097A50076BDA1 /* GoogleMobileAds.framework */; };
+		9256ED4B1DA097A60076BDA1 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9256ED491DA097A50076BDA1 /* GoogleMobileAds.framework */; };
+		9256ED4C1DA097A60076BDA1 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9256ED491DA097A50076BDA1 /* GoogleMobileAds.framework */; };
 		927C48941D63D910002DE3E6 /* replay.png in Resources */ = {isa = PBXBuildFile; fileRef = 927C48921D63D910002DE3E6 /* replay.png */; };
 		927C48961D63D993002DE3E6 /* upload (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 927C48951D63D993002DE3E6 /* upload (1).png */; };
 		927C48981D63DAD7002DE3E6 /* home-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 927C48971D63DAD7002DE3E6 /* home-button.png */; };
@@ -73,10 +82,9 @@
 		92A8CB351D5D243100023E42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92A8CB331D5D243100023E42 /* LaunchScreen.storyboard */; };
 		92A8CB401D5D243300023E42 /* Clinton_or_TrumpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A8CB3F1D5D243300023E42 /* Clinton_or_TrumpTests.m */; };
 		92A8CB4B1D5D243300023E42 /* Clinton_or_TrumpUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A8CB4A1D5D243300023E42 /* Clinton_or_TrumpUITests.m */; };
-		92A8CB5D1D5D2E5D00023E42 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A8CB5C1D5D2E5D00023E42 /* GoogleMobileAds.framework */; };
-		92A8CB5E1D5D2E5D00023E42 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A8CB5C1D5D2E5D00023E42 /* GoogleMobileAds.framework */; };
-		92A8CB5F1D5D2E5E00023E42 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A8CB5C1D5D2E5D00023E42 /* GoogleMobileAds.framework */; };
 		92A8CB671D5D312100023E42 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A8CB661D5D312100023E42 /* HomeViewController.m */; };
+		92BA3E9D1DA5F0B2000E46AB /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92BA3E9C1DA5F0B2000E46AB /* FirebaseAnalytics.framework */; };
+		92BF650D1D66A80D0016218E /* Quotes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 92BF650C1D66A80D0016218E /* Quotes.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,12 +118,17 @@
 		92125F3D1D65666000385D08 /* hometextwhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hometextwhite.png; sourceTree = "<group>"; };
 		92125F3E1D65666000385D08 /* hometextblack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hometextblack.png; sourceTree = "<group>"; };
 		92125F431D656BA500385D08 /* clinton trump combined 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clinton trump combined 2.png"; sourceTree = "<group>"; };
+		9224F3641D9B6378009A0208 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		922D5FB41D662E7C00A8AD4B /* play-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play-button.png"; sourceTree = "<group>"; };
+		922D5FB81D662FE300A8AD4B /* settings (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings (1).png"; sourceTree = "<group>"; };
+		923481A31D9649B100CCC6DE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		924076461D5D44C700BC0BE9 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		924076471D5D44C700BC0BE9 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
-		924076591D5D56F500BC0BE9 /* GameOverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverViewController.h; sourceTree = "<group>"; };
-		9240765A1D5D56F500BC0BE9 /* GameOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverViewController.m; sourceTree = "<group>"; };
 		9240765C1D5D573D00BC0BE9 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		9240765D1D5D573D00BC0BE9 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		9256ED451DA094DA0076BDA1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9256ED491DA097A50076BDA1 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		9256ED4D1DA098650076BDA1 /* Firebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
 		927C48921D63D910002DE3E6 /* replay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = replay.png; sourceTree = "<group>"; };
 		927C48951D63D993002DE3E6 /* upload (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "upload (1).png"; sourceTree = "<group>"; };
 		927C48971D63DAD7002DE3E6 /* home-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-button.png"; sourceTree = "<group>"; };
@@ -174,9 +187,10 @@
 		92A8CB461D5D243300023E42 /* Clinton or TrumpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Clinton or TrumpUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A8CB4A1D5D243300023E42 /* Clinton_or_TrumpUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Clinton_or_TrumpUITests.m; sourceTree = "<group>"; };
 		92A8CB4C1D5D243300023E42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		92A8CB5C1D5D2E5D00023E42 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = ../GoogleMobileAds.framework; sourceTree = "<group>"; };
 		92A8CB651D5D312100023E42 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		92A8CB661D5D312100023E42 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		92BA3E9C1DA5F0B2000E46AB /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		92BF650C1D66A80D0016218E /* Quotes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Quotes.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,8 +198,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92A8CB5D1D5D2E5D00023E42 /* GoogleMobileAds.framework in Frameworks */,
+				9224F3661D9B673A009A0208 /* StoreKit.framework in Frameworks */,
+				923481A41D9649B200CCC6DE /* AVFoundation.framework in Frameworks */,
+				9256ED4A1DA097A50076BDA1 /* GoogleMobileAds.framework in Frameworks */,
 				920804901D5E90380012C472 /* GameKit.framework in Frameworks */,
+				92BA3E9D1DA5F0B2000E46AB /* FirebaseAnalytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,7 +210,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92A8CB5E1D5D2E5D00023E42 /* GoogleMobileAds.framework in Frameworks */,
+				9256ED4B1DA097A60076BDA1 /* GoogleMobileAds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +218,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92A8CB5F1D5D2E5E00023E42 /* GoogleMobileAds.framework in Frameworks */,
+				9256ED4C1DA097A60076BDA1 /* GoogleMobileAds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,12 +229,14 @@
 			isa = PBXGroup;
 			children = (
 				92125F3B1D65666000385D08 /* hometextblackwhite.png */,
+				922D5FB81D662FE300A8AD4B /* settings (1).png */,
 				92125F3C1D65666000385D08 /* hometextwhiteblack.png */,
 				92125F3D1D65666000385D08 /* hometextwhite.png */,
 				92125F3E1D65666000385D08 /* hometextblack.png */,
 				92125F431D656BA500385D08 /* clinton trump combined 2.png */,
 				927C48991D63DADC002DE3E6 /* leaderboard.png */,
 				92125F2C1D652D8000385D08 /* left-arrow.png */,
+				922D5FB41D662E7C00A8AD4B /* play-button.png */,
 				92125F381D65610100385D08 /* text.png */,
 				92125F361D654A4300385D08 /* clinton trump combined.png */,
 				927C48971D63DAD7002DE3E6 /* home-button.png */,
@@ -314,10 +333,9 @@
 		92A8CB241D5D243000023E42 /* Clinton or Trump */ = {
 			isa = PBXGroup;
 			children = (
+				9256ED4D1DA098650076BDA1 /* Firebase.h */,
 				92A8CB281D5D243000023E42 /* AppDelegate.h */,
 				92A8CB291D5D243000023E42 /* AppDelegate.m */,
-				924076591D5D56F500BC0BE9 /* GameOverViewController.h */,
-				9240765A1D5D56F500BC0BE9 /* GameOverViewController.m */,
 				924076461D5D44C700BC0BE9 /* GameViewController.h */,
 				924076471D5D44C700BC0BE9 /* GameViewController.m */,
 				9208048C1D5E68D80012C472 /* SettingsCell.h */,
@@ -333,6 +351,8 @@
 				927C48EB1D6415A0002DE3E6 /* Third Party */,
 				92125F3A1D65612100385D08 /* User Interface */,
 				92A8CB331D5D243100023E42 /* LaunchScreen.storyboard */,
+				9256ED451DA094DA0076BDA1 /* GoogleService-Info.plist */,
+				92BF650C1D66A80D0016218E /* Quotes.plist */,
 				92A8CB361D5D243100023E42 /* Info.plist */,
 				92A8CB251D5D243000023E42 /* Supporting Files */,
 			);
@@ -368,8 +388,11 @@
 		92FCAD641D628ADA00CA7482 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				92BA3E9C1DA5F0B2000E46AB /* FirebaseAnalytics.framework */,
+				9256ED491DA097A50076BDA1 /* GoogleMobileAds.framework */,
+				9224F3641D9B6378009A0208 /* StoreKit.framework */,
+				923481A31D9649B100CCC6DE /* AVFoundation.framework */,
 				9208048F1D5E90380012C472 /* GameKit.framework */,
-				92A8CB5C1D5D2E5D00023E42 /* GoogleMobileAds.framework */,
 			);
 			name = Frameworks;
 			path = "Clinton or Trump";
@@ -442,9 +465,12 @@
 				TargetAttributes = {
 					92A8CB211D5D242E00023E42 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 6AC6Y6LT37;
+						DevelopmentTeam = 2RVA84ZL8Y;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
 								enabled = 1;
 							};
 						};
@@ -509,6 +535,7 @@
 				927C48B61D63ECE4002DE3E6 /* trump10sized.jpg in Resources */,
 				927C48E51D6409AA002DE3E6 /* clinton7sized.jpg in Resources */,
 				92125F421D65666000385D08 /* hometextblack.png in Resources */,
+				922D5FB51D662E7C00A8AD4B /* play-button.png in Resources */,
 				927C48B31D63ECE4002DE3E6 /* trump7sized.jpg in Resources */,
 				927C48D51D640749002DE3E6 /* clinton5sized.jpg in Resources */,
 				92125F2D1D652D8000385D08 /* left-arrow.png in Resources */,
@@ -520,11 +547,13 @@
 				92A8CB321D5D243100023E42 /* Assets.xcassets in Resources */,
 				927C48BB1D63ECE4002DE3E6 /* trump15sized.jpg in Resources */,
 				927C48D11D640749002DE3E6 /* clinton1sized.jpg in Resources */,
+				922D5FB91D662FE300A8AD4B /* settings (1).png in Resources */,
 				927C48AE1D63ECE4002DE3E6 /* trump2sized.jpg in Resources */,
 				927C48B21D63ECE4002DE3E6 /* trump6sized.jpg in Resources */,
 				92125F411D65666000385D08 /* hometextwhite.png in Resources */,
 				927C48DC1D640749002DE3E6 /* clinton12sized.jpg in Resources */,
 				927C48F51D6415AF002DE3E6 /* johnson2sized.jpg in Resources */,
+				92BF650D1D66A80D0016218E /* Quotes.plist in Resources */,
 				927C48941D63D910002DE3E6 /* replay.png in Resources */,
 				927C48D81D640749002DE3E6 /* clinton8sized.jpg in Resources */,
 				927C48C01D63F1FF002DE3E6 /* trump11sized.jpg in Resources */,
@@ -536,6 +565,7 @@
 				927C48E61D6409AA002DE3E6 /* clinton4sized.jpg in Resources */,
 				927C48D21D640749002DE3E6 /* clinton2sized.jpg in Resources */,
 				92125F3F1D65666000385D08 /* hometextblackwhite.png in Resources */,
+				9256ED461DA094DA0076BDA1 /* GoogleService-Info.plist in Resources */,
 				927C48E81D640AEB002DE3E6 /* clinton13sized.jpg in Resources */,
 				927C48B51D63ECE4002DE3E6 /* trump9sized.jpg in Resources */,
 				927C489A1D63DADC002DE3E6 /* leaderboard.png in Resources */,
@@ -548,6 +578,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9256ED471DA094DA0076BDA1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,6 +586,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9256ED481DA094DA0076BDA1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,7 +602,6 @@
 				92A8CB2A1D5D243000023E42 /* AppDelegate.m in Sources */,
 				92A8CB271D5D243000023E42 /* main.m in Sources */,
 				9240765E1D5D573D00BC0BE9 /* SettingsViewController.m in Sources */,
-				9240765B1D5D56F500BC0BE9 /* GameOverViewController.m in Sources */,
 				92A8CB671D5D312100023E42 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -663,7 +694,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -702,7 +733,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -715,6 +746,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -724,11 +756,21 @@
 					"$(PROJECT_DIR)/Clinton",
 					or,
 					Trump,
+					"$(PROJECT_DIR)/Clinton",
+					or,
+					Trump,
+					"$(PROJECT_DIR)/Clinton",
+					or,
+					Trump,
+					"$(PROJECT_DIR)/Clinton\\ or\\ Trump",
 				);
 				INFOPLIST_FILE = "Clinton or Trump/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.JackStenglein.Clinton-or-Trump";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JackStenglein.Clinton-or-Trump1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -737,6 +779,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -746,11 +789,21 @@
 					"$(PROJECT_DIR)/Clinton",
 					or,
 					Trump,
+					"$(PROJECT_DIR)/Clinton",
+					or,
+					Trump,
+					"$(PROJECT_DIR)/Clinton",
+					or,
+					Trump,
+					"$(PROJECT_DIR)/Clinton\\ or\\ Trump",
 				);
 				INFOPLIST_FILE = "Clinton or Trump/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.JackStenglein.Clinton-or-Trump";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JackStenglein.Clinton-or-Trump1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -761,6 +814,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Clinton",
+					or,
+					Trump,
 				);
 				INFOPLIST_FILE = "Clinton or TrumpTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -777,6 +833,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Clinton",
+					or,
+					Trump,
 				);
 				INFOPLIST_FILE = "Clinton or TrumpTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -792,6 +851,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Clinton",
+					or,
+					Trump,
 				);
 				INFOPLIST_FILE = "Clinton or TrumpUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -807,6 +869,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Clinton",
+					or,
+					Trump,
 				);
 				INFOPLIST_FILE = "Clinton or TrumpUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

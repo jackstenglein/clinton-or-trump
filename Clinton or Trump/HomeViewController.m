@@ -8,6 +8,7 @@
 
 #import "HomeViewController.h"
 #import "AppDelegate.h"
+#import <sys/sysctl.h>
 
 @interface HomeViewController ()
 
@@ -25,13 +26,23 @@
     // Do any additional setup after loading the view.
     gamesPlayed = 0;
     appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [self loadInterstitialAds];
+    
+    
+    if(!appDelegate.removeAdsPurchased)
+        [self loadInterstitialAds];
+    
+    
+    int widthConstraint = [self widthConstraintForDeviceType];
+    self.backgroundWithConstraint.constant = widthConstraint;
     
     self.imageView.alpha = 0.0f;
     animate = YES;
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated{
+    [self.view layoutIfNeeded];
+    
     if(animate)
     {
         [UIView animateWithDuration:1.5
@@ -51,18 +62,39 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(int)widthConstraintForDeviceType{
+    
+    size_t size;
+    sysctlbyname("hw.machine", NULL, &size, NULL, 0);
+    char *machine = malloc(size);
+    sysctlbyname("hw.machine", machine, &size, NULL, 0);
+    NSString *platform = [NSString stringWithCString:machine encoding:NSUTF8StringEncoding];
+    
+    if ([platform isEqualToString:@"iPhone4,1"])    return 0;
+    if ([platform isEqualToString:@"iPhone5,1"])    return 18;
+    if ([platform isEqualToString:@"iPhone5,2"])    return 18;
+    if ([platform isEqualToString:@"iPhone5,3"])    return 18;
+    if ([platform isEqualToString:@"iPhone5,4"])    return 18;
+    if ([platform isEqualToString:@"iPhone6,1"])    return 18;
+    if ([platform isEqualToString:@"iPhone6,2"])    return 18;
+    if ([platform isEqualToString:@"iPhone7,2"])    return 22;
+    if ([platform isEqualToString:@"iPhone7,1"])    return 24;
+    if ([platform isEqualToString:@"iPhone8,1"])    return 22;
+    if ([platform isEqualToString:@"iPhone8,2"])    return 24;
+    
+    return 0;
+}
+
 
 //AD METHODS
 -(void)loadInterstitialAds{
     NSLog(@"Load Interstitial Ads");
     
     self.interstitial =
-    [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-9083199621917832/7672840509"];
+    [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-9083199621917832/7256183704"];
     self.interstitial.delegate = self;
     
     GADRequest *request = [GADRequest request];
-    // Request test ads on devices you specify. Your test device ID is printed to the console when
-    // an ad request is made.
     request.testDevices = @[ kGADSimulatorID, @"e7ec5950c11b81a88c095ef7eb934ace", @"74e0f8f12a18d92e0d89c4c682bd4e7e" ];
     [self.interstitial loadRequest:request];
 }
@@ -109,7 +141,7 @@
     
     NSLog(@"Games played %d", gamesPlayed);
     
-    if(gamesPlayed >= 3)
+    if(gamesPlayed >= 3 && !appDelegate.removeAdsPurchased)
     {
         gamesPlayed = 0;
         [self showInterstitial];

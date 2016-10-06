@@ -14,6 +14,7 @@
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) NSString *leaderboardIdentifier;
 @property BOOL gameCenterEnabled;
+@property BOOL removeAdsPurchased;
 -(void)authenticateLocalPlayer;
 @end
 

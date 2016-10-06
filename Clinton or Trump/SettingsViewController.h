@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <MessageUI/MessageUI.h>
+#import <StoreKit/StoreKit.h>
 
-@interface SettingsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource,MFMailComposeViewControllerDelegate>
+@interface SettingsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource,MFMailComposeViewControllerDelegate, SKProductsRequestDelegate, SKPaymentTransactionObserver>
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 - (IBAction)back:(id)sender;
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
-
+@property (strong, nonatomic) SKProduct *removeAdsProduct;
+@property (strong, nonatomic) NSString *removeAdsProductIdentifier;
 @end

@@ -5,23 +5,36 @@
 //  Created by Jack STENGLEIN on 8/11/16.
 //  Copyright © 2016 Jack Stenglein. All rights reserved.
 //
+static const int DIFFICULTY_ROW = 0;
+//static const int HARD_HIGH_SCORE_ROW = 1;
+//static const int EASY_HIGH_SCORE_ROW = 2;
+static const int TOTAL_MISTAKES_ROW = 3;
+static const int REMOVE_ADS_ROW = 4;
+static const int CONTACT_US_ROW = 5;
 
 #import "SettingsViewController.h"
 #import "SettingsCell.h"
 #import "AppDelegate.h"
 
+#define kRemoveAdsProductIdentifier @"clintonTrumpRemoveAds"
+
 @interface SettingsViewController ()
+
 
 @end
 
 @implementation SettingsViewController
 {
     NSArray *titleLabels;
+    AppDelegate *appDelegate;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //[[SKPaymentQueue defaultQueue] addTransactionObserver:self];
+    self.removeAdsProductIdentifier = @"clintonTrumpRemoveAds";
+    appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
     int image = arc4random_uniform(2);
     
@@ -34,7 +47,7 @@
         [self.imageView setImage:[UIImage imageNamed:@"trump14sized.jpg"]];
     }
     
-    titleLabels = [[NSArray alloc] initWithObjects:@"Audio",@"Difficulty",@"Hard High Score",@"Easy High Score",@"Total Mistakes",@"Remove Ads",@"Contact Us", nil];
+    titleLabels = [[NSArray alloc] initWithObjects:/*@"Audio",*/@"Difficulty",@"Hard High Score",@"Easy High Score",@"Total Mistakes",@"Remove Ads/Restore Purchase",@"Contact Us", nil];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 }
 
@@ -67,19 +80,19 @@
     
     switch (row)
     {
-        case 0: //audio row
+        /*case 0: //audio row
             if([[NSUserDefaults standardUserDefaults] boolForKey:@"Audio"])
                 cell.valueLabel.text = @"On";
             else
                 cell.valueLabel.text = @"Off";
-            break;
-        case 1: //difficult row
+            break;*/
+        case DIFFICULTY_ROW: //difficult row
             cell.valueLabel.text = [[NSUserDefaults standardUserDefaults] objectForKey:[titleLabels objectAtIndex:row]];
             break;
-        case 5: //remove ads row
+        case REMOVE_ADS_ROW: //remove ads row
             cell.valueLabel.hidden = YES;
             break;
-        case 6: //contact row
+        case CONTACT_US_ROW: //contact row
             cell.valueLabel.hidden = YES;
             break;
         default:
@@ -98,25 +111,25 @@
     int row = (int)indexPath.row;
     switch(row)
     {
-        case 0: //audio row
+        /*case 0: //audio row
             [self toggleAudio];
-            break;
-        case 1: //difficulty row
+            break;*/
+        case DIFFICULTY_ROW: //difficulty row
             [self toggleDifficulty];
             break;
-        case 2:
-            [self deleteStat:@"Hard High Score"];
+        /*case 2:
+            //[self deleteStat:@"Hard High Score"];
             break;
         case 3:
-            [self deleteStat:@"Easy High Score"];
-            break;
-        case 4:
+            //[self deleteStat:@"Easy High Score"];
+            break;*/
+        case TOTAL_MISTAKES_ROW:
             [self deleteStat:@"Total Mistakes"];
             break;
-        case 5:
-            [self removeAds];
+        case REMOVE_ADS_ROW:
+            [self confirmRemoveAds];
             break;
-        case 6:
+        case CONTACT_US_ROW:
             [self contactUs];
             break;
         
@@ -134,7 +147,7 @@
     // Pass the selected object to the new view controller.
 }
 */
--(void)toggleAudio{
+/*-(void)toggleAudio{
     
     BOOL audio = [[NSUserDefaults standardUserDefaults] boolForKey:@"Audio"];
     
@@ -142,12 +155,11 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
     
     [self.tableView reloadData];
-}
+}*/
 
 -(void)toggleDifficulty{
     
     NSString *difficulty = [[NSUserDefaults standardUserDefaults] objectForKey:@"Difficulty"];
-    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
     if( [difficulty isEqualToString:@"Hard"] )
     {
@@ -180,13 +192,145 @@
     [self presentViewController:confirmAlert animated:YES completion:nil];
 }
 
--(void)removeAds{
-    NSLog(@"Remove Ads—To do");
+
+//REMOVE ADS METHODS
+-(void)confirmRemoveAds{
+    
+    if([[NSUserDefaults standardUserDefaults] boolForKey:@"removeAdsPurchased"])
+    {
+        [self presentErrorAlertWithTitle:@"Already Purchased" message:@"Ads have already been removed on this device."];
+    }
+    else
+    {
+        [self removeAds];
+    }
+    
+        
+    /*UIAlertController *confirmAlert = [UIAlertController alertControllerWithTitle:@"Remove Ads?" message:@"Are you sure you want to remove ads for $0.99?" preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
+    
+    UIAlertAction *continueAction = [UIAlertAction actionWithTitle:@"Purchase" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self removeAds];
+    }];
+    
+    [confirmAlert addAction: cancelAction];
+    [confirmAlert addAction:continueAction];
+    [self presentViewController:confirmAlert animated:YES completion:nil];*/
+    
 }
 
+
+-(void)removeAds{
+    NSLog(@"Remove Ads");
+    
+    
+    if([SKPaymentQueue canMakePayments])
+    {
+        SKProductsRequest *request = [[SKProductsRequest alloc] initWithProductIdentifiers:[NSSet setWithObject:self.removeAdsProductIdentifier]];
+        request.delegate = self;
+        [request start];
+    }
+    /*
+    if([self canMakePurchases])
+    {
+        NSLog(@"User can make payments");
+        
+        SKProductsRequest *removeAdsRequest = [[SKProductsRequest alloc] initWithProductIdentifiers:[NSSet setWithObjects:kRemoveAdsProductIdentifier, nil]];
+        removeAdsRequest.delegate = self;
+        [removeAdsRequest start];
+    }
+    else
+    {
+        NSLog(@"User cannot make payment—display alert");
+        [self presentErrorAlertWithTitle:@"Cannot Make Payments" message:@"This user is not authorized to make payments on the App Store. Check the restrictions in your device's settings."];
+    }*/
+}
+
+-(void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response
+{
+    NSArray *products = response.products;
+    
+    if(products.count > 0)
+    {
+        NSLog(@"Available Products");
+        self.removeAdsProduct = products.firstObject;
+        [self buyProduct];
+    }
+    
+}
+
+-(void)buyProduct
+{
+    NSLog(@"Buy product");
+    
+    [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
+    //[[SKPaymentQueue defaultQueue] restoreCompletedTransactions];
+    SKPayment *payment = [SKPayment paymentWithProduct:self.removeAdsProduct];
+    [[SKPaymentQueue defaultQueue] addPayment:payment];
+}
+
+-(void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray<SKPaymentTransaction *> *)transactions
+{
+    NSLog(@"Update transaction");
+    
+    for(SKPaymentTransaction *transaction in transactions)
+    {
+        switch(transaction.transactionState)
+        {
+            case SKPaymentTransactionStatePurchased:
+                NSLog(@"Transaction purchased");
+                [self unlockPurchase];
+                [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
+                break;
+            case SKPaymentTransactionStateFailed:
+                NSLog(@"Transaction failed");
+                [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
+                break;
+            case SKPaymentTransactionStateRestored:
+                NSLog(@"Transaction restored");
+                [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
+                break;
+            case SKPaymentTransactionStatePurchasing:
+                NSLog(@"Transaction purchasing");
+                break;
+                
+            default:
+                break;
+        }
+    }
+    
+}
+
+-(void)paymentQueueRestoreCompletedTransactionsFinished:(SKPaymentQueue *)queue
+{
+    NSLog(@"Restore finished. Restored Purchases: %lu", (unsigned long)queue.transactions.count);
+    
+    [self unlockPurchase];
+}
+
+-(void)paymentQueue:(SKPaymentQueue *)queue restoreCompletedTransactionsFailedWithError:(NSError *)error
+{
+    NSLog(@"Restore failed: %@", error);
+}
+
+-(void)unlockPurchase
+{
+    NSLog(@"Unlock purchase");
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"removeAdsPurchased"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    [appDelegate setRemoveAdsPurchased:YES];
+    //[self presentErrorAlertWithTitle:@"Ads removed" message:@"Ads have been removed. You can always restore this purchase for free. Thank you."];
+}
+//END REMOVE ADS METHODS*/
+
+
+
+
+//CONTACT METHODS
 -(void)contactUs{
     
-    NSArray *recipients = [NSArray arrayWithObject:@"jackstenglein@gmail.com"];
+    NSArray *recipients = [NSArray arrayWithObject:@"jackstdevelopment@gmail.com"];
     
     MFMailComposeViewController *mailVC = [[MFMailComposeViewController alloc] init];
     mailVC.mailComposeDelegate = self;

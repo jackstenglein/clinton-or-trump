@@ -8,7 +8,9 @@
 
 #import "GameViewController.h"
 #import "AppDelegate.h"
+#import <AVFoundation/AVFoundation.h>
 
+const NSString *shareLink = @"https://itunes.apple.com/us/app/clinton-or-trump/id1159219246?ls=1&mt=8";
 
 @interface GameViewController ()
 
@@ -43,9 +45,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSLog(@"View did load");
-    
-    
+    //NSLog(@"View did load");
+   
     //load images
     imagesArray = [[NSMutableArray alloc] init];
     answersArray = [[NSMutableArray alloc] init];
@@ -56,7 +57,6 @@
     [self loadJohnsonImages];
     [self loadSteinImages];
     
-    
     //set up UI
     [self resetUI];
     
@@ -66,6 +66,7 @@
     currentThirdParty = NO;
     upcomingThirdParty = NO;
     
+    //set up hard or easy mode
     NSString *mode = [[NSUserDefaults standardUserDefaults] objectForKey:@"Difficulty"];
     if([mode isEqualToString:@"Hard"])
     {
@@ -75,13 +76,15 @@
     else
     {
         isHardMode = NO;
-        timeInterval = 1.5;
+        timeInterval = 1.1;
     }
     
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"Quotes" ofType:@"plist"];
+    quoteDictionary = [NSDictionary dictionaryWithContentsOfFile:plistPath];
+    //NSLog(@"Quote dictionary: %@",quoteDictionary);
+   
     
-    quoteDictionary = [[NSDictionary alloc] initWithObjects:@[@"\"If you make $200 million a year, you pay 10 percent – you’re paying very little relatively to somebody that’s making $50,000 a year.\"",@"\"I know people making a tremendous amount of money and paying virtually no taxes, and I think it’s unfair.\""] forKeys:@[@"—Trump, Sept. 2015",@"—Trump, Sept. 2015"]];
-    
-    NSLog(@"Answers Array: %@", answersArray);
+    //NSLog(@"Answers Array: %@", answersArray);
     
     //display first picture
     currentIndex = arc4random_uniform((int)[imagesArray count]);
@@ -90,6 +93,9 @@
     
     //get ready for next picture
     [self pickNewPhoto];
+    
+    /*if([[NSUserDefaults standardUserDefaults] boolForKey:@"Audio"])
+        [self loadAudio];*/
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -98,9 +104,95 @@
     
     if(!gameOver) //start the game timer
     {
-        gameOverTimer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(outOfTime) userInfo:nil repeats:YES];
+        /*if(audioArray != nil)
+        {
+            [cheering setVolume:0.75];
+            [cheering setNumberOfLoops:-1];
+            [cheering play];
+            [self switchAudioFile];
+        }*/
+        
+        gameOverTimer = [NSTimer scheduledTimerWithTimeInterval:timeInterval target:self selector:@selector(outOfTime) userInfo:nil repeats:NO];
     }
 }
+
+/*-(void)loadAudio {
+    
+    NSString *resourcePath = [[NSBundle mainBundle] resourcePath];
+    NSString *path = [NSString stringWithFormat:@"%@/booing.mp3", resourcePath];
+    NSURL *soundUrl = [NSURL fileURLWithPath:path];
+    booing = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
+    
+    path = [NSString stringWithFormat:@"%@/cheering.mp3", resourcePath];
+    soundUrl = [NSURL fileURLWithPath:path];
+    cheering = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
+    
+    
+    audioArray = [[NSMutableArray alloc] initWithCapacity:30];
+    [self loadAudioFile:@"attackingLooks.mp3"];
+    [self loadAudioFile:@"attackObama.mp3"];
+    [self loadAudioFile:@"china.mp3"];
+    [self loadAudioFile:@"crookedHillary.mp3"];
+    [self loadAudioFile:@"email1.mp3"];
+    [self loadAudioFile:@"email2.mp3"];
+    [self loadAudioFile:@"email3.mp3"];
+    [self loadAudioFile:@"email4.mp3"];
+    [self loadAudioFile:@"gayMarriage1.mp3"];
+    [self loadAudioFile:@"gayMarriage2.mp3"];
+    [self loadAudioFile:@"getOut.mp3"];
+    [self loadAudioFile:@"greatWall1.mp3"];
+    [self loadAudioFile:@"greatWall2.mp3"];
+    [self loadAudioFile:@"greatWall3.mp3"];
+    [self loadAudioFile:@"greatWall4.mp3"];
+    [self loadAudioFile:@"greatWall5.mp3"];
+    [self loadAudioFile:@"greatWall6.mp3"];
+    [self loadAudioFile:@"greatWall7.mp3"];
+    [self loadAudioFile:@"huge1.mp3"];
+    [self loadAudioFile:@"insultingTrump1.mp3"];
+    [self loadAudioFile:@"insultingTrump2.mp3"];
+    [self loadAudioFile:@"mistake.mp3"];
+    [self loadAudioFile:@"muslims.mp3"];
+    [self loadAudioFile:@"reporterInsult.mp3"];
+    [self loadAudioFile:@"right.mp3"];
+    [self loadAudioFile:@"sitDown.mp3"];
+    [self loadAudioFile:@"sniperFire1.mp3"];
+    [self loadAudioFile:@"sniperFire2.mp3"];
+    [self loadAudioFile:@"sniperFire3.mp3"];
+    [self loadAudioFile:@"warHero.mp3"];
+
+}
+
+-(void)loadAudioFile:(NSString *)file{
+    // Construct URL to sound file
+    NSString *resourcePath = [[NSBundle mainBundle] resourcePath];
+    NSString *path = [NSString stringWithFormat:@"%@/%@", resourcePath, file];
+    NSURL *soundUrl = [NSURL fileURLWithPath:path];
+    
+    // Create audio player object and initialize with URL to sound
+    // Add audio player to audio array
+    AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
+    [player setNumberOfLoops:0];
+    [player setVolume:1.0];
+    [audioArray addObject:player];
+}
+
+-(void)switchAudioFile{
+    
+    int num = 0;
+    while( num == currentIndex )
+    {
+        NSLog(@"Pick random audio: %d", (int)[audioArray count]);
+        num = arc4random_uniform((int)[audioArray count]);
+    }
+    
+    currentIndex = num;
+    
+    AVAudioPlayer *player = [audioArray objectAtIndex:currentIndex];
+    if([player play])
+        NSLog(@"PLAYING AUDIO");
+    
+    audioTimer = [NSTimer scheduledTimerWithTimeInterval:[player duration] + 5 target:self selector:@selector(switchAudioFile) userInfo:nil repeats:NO];
+}*/
 
 -(void)resetUI{
     NSLog(@"Reset UI");
@@ -348,47 +440,47 @@
     
     [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(showGameOverView) userInfo:nil repeats:NO];
     
+    [self setUpGameOverView];
+
+    appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [self reportScoreToGameCenter];
+}
+
+-(void)setUpGameOverView{
     //Set up game over view in preparation for when it shows
-    
-    
     if(isHardMode)
+        [self setUpScoreView:@"Hard"];
+    else
+        [self setUpScoreView:@"Easy"];
+    
+    [self setUpQuoteView];
+}
+
+-(void)setUpScoreView:(NSString *)mode
+{
+    self.modeLabel.text = [NSString stringWithFormat:@"Mode: %@", mode];
+    NSString *highScoreKey = [NSString stringWithFormat:@"%@ High Score", mode];
+    int highScore = (int)[[NSUserDefaults standardUserDefaults] integerForKey:highScoreKey];
+    if(score > highScore)
     {
-        self.modeLabel.text = @"Mode: Hard";
-        int highScore = (int)[[NSUserDefaults standardUserDefaults] integerForKey:@"Hard High Score"];
-        
-        if(score > highScore)
-        {
-            self.highScoreLabel.text = [NSString stringWithFormat:@"Previous High Score: %d", highScore];
-            [[NSUserDefaults standardUserDefaults] setInteger:score forKey:@"Hard High Score"];
-            [[NSUserDefaults standardUserDefaults] synchronize];
-        }
-        else
-        {
-            self.highScoreLabel.text = [NSString stringWithFormat:@"High Score: %d",highScore];
-        }
+        self.highScoreLabel.text = [NSString stringWithFormat:@"Previous High Score: %d", highScore];
+        [[NSUserDefaults standardUserDefaults] setInteger:score forKey:highScoreKey];
+        [[NSUserDefaults standardUserDefaults] synchronize];
     }
     else
-    {
-        self.modeLabel.text = @"Mode: Easy";
-        int highScore = (int)[[NSUserDefaults standardUserDefaults] integerForKey:@"Easy High Score"];
-        
-        if(score > highScore)
-        {
-            self.highScoreLabel.text = [NSString stringWithFormat:@"Previous High Score: %d", highScore];
-            [[NSUserDefaults standardUserDefaults] setInteger:score forKey:@"Easy High Score"];
-            [[NSUserDefaults standardUserDefaults] synchronize];
-        }
-        else
-        {
-            self.highScoreLabel.text = [NSString stringWithFormat:@"High Score: %d",highScore];
-        }
-    }
+        self.highScoreLabel.text = [NSString stringWithFormat:@"High Score: %d",highScore];
     
     self.currentScoreLabel.text = [NSString stringWithFormat:@"Current Score: %d", score];
-    
+}
+
+-(void)setUpQuoteView
+{
     NSArray *keys = [quoteDictionary allKeys];
-    self.quoteLabel.text = [quoteDictionary objectForKey:[keys objectAtIndex:0]];
-    self.quoteAnswerLabel.text = [keys objectAtIndex:0];
+
+    
+    int randomQuote = arc4random_uniform((int)[quoteDictionary count]);
+    self.quoteLabel.text = [keys objectAtIndex: randomQuote];
+    self.quoteAnswerLabel.text = [quoteDictionary objectForKey:[keys objectAtIndex:randomQuote]];
     self.quoteAnswerLabel.hidden = YES;
     self.viewAnswerButton.hidden = NO;
     self.quoteViewBottom.constant = 10;
@@ -396,10 +488,8 @@
     self.quoteLabel.numberOfLines = 0;
     CGSize labelSize = [self.quoteLabel.text sizeWithAttributes:@{NSFontAttributeName:self.quoteLabel.font}];
     self.quoteLabel.frame = CGRectMake(
-                             self.quoteLabel.frame.origin.x, self.quoteLabel.frame.origin.y,
-                             self.quoteLabel.frame.size.width, labelSize.height);
-    
-    appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+                                       self.quoteLabel.frame.origin.x, self.quoteLabel.frame.origin.y,
+                                       self.quoteLabel.frame.size.width, labelSize.height);
 }
 
 -(void)showGameOverView{
@@ -413,7 +503,6 @@
                      animations:^{
                          [self.view layoutIfNeeded]; // Called on parent view
                      }];
-    
 }
 
 - (IBAction)showQuoteAnswer:(id)sender {
@@ -428,10 +517,11 @@
                     }
                     completion:^(BOOL finished) {
                         
+                        //move bottom of box up
                         self.quoteViewBottom.constant = -14; //magic number, sorry
                         [UIView animateWithDuration:0.6
                                          animations:^{
-                                             [self.view layoutIfNeeded]; // Called on parent view
+                                             [self.view layoutIfNeeded];
                                          }];
                         
                         //show quote answer
@@ -444,13 +534,13 @@
                     }];
 }
 
+
+//RETURN TO HOME SCREEN
 - (IBAction)goHome:(id)sender {
     [self.delegate gameDidEnd];
 }
 
-- (IBAction)replay:(id)sender {
-}
-
+//GAME CENTER METHODS
 - (IBAction)showLeaderboard:(id)sender {
     NSLog(@"Show Game Center");
     
@@ -489,7 +579,24 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+-(void)reportScoreToGameCenter{
+    
+    if(appDelegate.gameCenterEnabled)
+    {
+        NSLog(@"Report Score");
+    
+        GKScore *scoreToReport = [[GKScore alloc] initWithLeaderboardIdentifier:appDelegate.leaderboardIdentifier];
+        scoreToReport.value = score;
+    
+        [GKScore reportScores:@[scoreToReport] withCompletionHandler:^(NSError *error) {
+            if (error) {
+            NSLog(@"Error: %@", [error localizedDescription]);
+            }
+        }];
+    }
+}
 
+//PROMOTION METHODS
 - (IBAction)share:(id)sender {
     
     NSLog(@"Share");
@@ -497,7 +604,7 @@
     NSMutableArray *sharingItems = [NSMutableArray new];
     
     [sharingItems addObject:self];
-    [sharingItems addObject:[NSString stringWithFormat:@"Just scored a %d on Clinton or Trump! Check out this great app! %@", score, @"getswappl.com"]];
+    [sharingItems addObject:[NSString stringWithFormat:@"Just scored a %d on Clinton or Trump! Check out this great app! %@", score, shareLink]];
     UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:sharingItems applicationActivities:nil];
     activityController.excludedActivityTypes = @[UIActivityTypeCopyToPasteboard,UIActivityTypeAirDrop];
     
@@ -508,16 +615,3 @@
 
 
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
