@@ -10,7 +10,7 @@
 #import <MessageUI/MessageUI.h>
 #import <StoreKit/StoreKit.h>
 
-@interface SettingsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource,MFMailComposeViewControllerDelegate, SKProductsRequestDelegate, SKPaymentTransactionObserver>
+@interface SettingsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource,MFMailComposeViewControllerDelegate, SKProductsRequestDelegate, SKRequestDelegate, SKPaymentTransactionObserver>
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 - (IBAction)back:(id)sender;
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;

@@ -27,12 +27,15 @@ static const int CONTACT_US_ROW = 5;
 {
     NSArray *titleLabels;
     AppDelegate *appDelegate;
+    BOOL isRestored;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     //[[SKPaymentQueue defaultQueue] addTransactionObserver:self];
+    isRestored = NO;
+    
     self.removeAdsProductIdentifier = @"clintonTrumpRemoveAds";
     appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
@@ -202,7 +205,25 @@ static const int CONTACT_US_ROW = 5;
     }
     else
     {
-        [self removeAds];
+        
+        UIAlertController *confirmAlert = [UIAlertController alertControllerWithTitle:@"Remove Ads?" message:@"Are you sure you want to remove ads? If you have previously bought this, it will be restored for free. Otherwise, it will cost $0.99." preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
+        
+        UIAlertAction *continueAction = [UIAlertAction actionWithTitle:@"Purchase" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [self removeAds];
+        }];
+        
+        UIAlertAction *restoreAction = [UIAlertAction actionWithTitle:@"Restore" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [self restorePurchase];
+        }];
+        
+        
+        [confirmAlert addAction: cancelAction];
+        [confirmAlert addAction:continueAction];
+        [confirmAlert addAction:restoreAction];
+        [self presentViewController:confirmAlert animated:YES completion:nil];
+        //[self removeAds];
     }
     
         
@@ -231,6 +252,11 @@ static const int CONTACT_US_ROW = 5;
         request.delegate = self;
         [request start];
     }
+    else
+    {
+        NSLog(@"User cannot make payment—display alert");
+        [self presentErrorAlertWithTitle:@"Cannot Make Payments" message:@"This user is not authorized to make payments on the App Store. Check the restrictions in your device's settings."];
+    }
     /*
     if([self canMakePurchases])
     {
@@ -245,6 +271,31 @@ static const int CONTACT_US_ROW = 5;
         NSLog(@"User cannot make payment—display alert");
         [self presentErrorAlertWithTitle:@"Cannot Make Payments" message:@"This user is not authorized to make payments on the App Store. Check the restrictions in your device's settings."];
     }*/
+}
+
+-(void)restorePurchase
+{
+    NSLog(@"Restore Purchase");
+    SKReceiptRefreshRequest *request = [[SKReceiptRefreshRequest alloc] init];
+    request.delegate = self;
+    [request start];
+}
+
+-(void)requestDidFinish:(SKRequest *)request
+{
+    if([request isKindOfClass:[SKReceiptRefreshRequest class]])
+    {
+        NSLog(@"Request Finished");
+        [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
+        [[SKPaymentQueue defaultQueue] restoreCompletedTransactions];
+    }
+}
+
+-(void)request:(SKRequest *)request didFailWithError:(NSError *)error
+{
+    NSLog(@"Request error: %@", error);
+    
+    [self presentErrorAlertWithTitle:@"No receipt found" message:@"It appears you haven't purchased this item before. Please try again later or send an email if you believe this is an error."];
 }
 
 -(void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response
@@ -289,6 +340,8 @@ static const int CONTACT_US_ROW = 5;
                 break;
             case SKPaymentTransactionStateRestored:
                 NSLog(@"Transaction restored");
+                isRestored = YES;
+                [self unlockPurchase];
                 [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
                 break;
             case SKPaymentTransactionStatePurchasing:
@@ -296,6 +349,7 @@ static const int CONTACT_US_ROW = 5;
                 break;
                 
             default:
+                NSLog(@"Default state");
                 break;
         }
     }
@@ -304,9 +358,22 @@ static const int CONTACT_US_ROW = 5;
 
 -(void)paymentQueueRestoreCompletedTransactionsFinished:(SKPaymentQueue *)queue
 {
-    NSLog(@"Restore finished. Restored Purchases: %lu", (unsigned long)queue.transactions.count);
+    //SKPaymentTransaction *transaction = [[SKPaymentTransaction alloc] init];
     
-    [self unlockPurchase];
+    if(!isRestored)
+    {
+        NSLog(@"User has not bought");
+        [self presentErrorAlertWithTitle:@"No receipt found" message:@"It appears you haven't purchased this item before. Please try again later or send an email if you believe this is an error."];
+    }
+
+    /*NSURL *receiptURL = [[NSBundle mainBundle] appStoreReceiptURL];
+    NSData *receipt = [NSData dataWithContentsOfURL:receiptURL];
+    if (receipt) {
+        NSLog(@"Receipt found");
+    }
+    else{
+        NSLog(@"No receipt found");
+    }*/
 }
 
 -(void)paymentQueue:(SKPaymentQueue *)queue restoreCompletedTransactionsFailedWithError:(NSError *)error
@@ -320,7 +387,7 @@ static const int CONTACT_US_ROW = 5;
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"removeAdsPurchased"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     [appDelegate setRemoveAdsPurchased:YES];
-    //[self presentErrorAlertWithTitle:@"Ads removed" message:@"Ads have been removed. You can always restore this purchase for free. Thank you."];
+    [self presentErrorAlertWithTitle:@"Ads removed" message:@"Ads have been removed. You can always restore this purchase for free. Thank you."];
 }
 //END REMOVE ADS METHODS*/
 

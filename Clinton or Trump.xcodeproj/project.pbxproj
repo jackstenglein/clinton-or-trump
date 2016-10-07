@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9208048E1D5E68D80012C472 /* SettingsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9208048D1D5E68D80012C472 /* SettingsCell.m */; };
-		920804901D5E90380012C472 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9208048F1D5E90380012C472 /* GameKit.framework */; };
 		92125F2D1D652D8000385D08 /* left-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 92125F2C1D652D8000385D08 /* left-arrow.png */; };
 		92125F2F1D65346500385D08 /* clintonflicker.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92125F2E1D65346500385D08 /* clintonflicker.jpg */; };
 		92125F311D65348000385D08 /* trump flicker.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92125F301D65348000385D08 /* trump flicker.jpg */; };
@@ -19,18 +18,16 @@
 		92125F411D65666000385D08 /* hometextwhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 92125F3D1D65666000385D08 /* hometextwhite.png */; };
 		92125F421D65666000385D08 /* hometextblack.png in Resources */ = {isa = PBXBuildFile; fileRef = 92125F3E1D65666000385D08 /* hometextblack.png */; };
 		92125F441D656BA500385D08 /* clinton trump combined 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 92125F431D656BA500385D08 /* clinton trump combined 2.png */; };
-		9224F3661D9B673A009A0208 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9224F3641D9B6378009A0208 /* StoreKit.framework */; };
 		922D5FB51D662E7C00A8AD4B /* play-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 922D5FB41D662E7C00A8AD4B /* play-button.png */; };
 		922D5FB91D662FE300A8AD4B /* settings (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 922D5FB81D662FE300A8AD4B /* settings (1).png */; };
-		923481A41D9649B200CCC6DE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923481A31D9649B100CCC6DE /* AVFoundation.framework */; };
 		924076481D5D44C700BC0BE9 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 924076471D5D44C700BC0BE9 /* GameViewController.m */; };
 		9240765E1D5D573D00BC0BE9 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9240765D1D5D573D00BC0BE9 /* SettingsViewController.m */; };
 		9256ED461DA094DA0076BDA1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9256ED451DA094DA0076BDA1 /* GoogleService-Info.plist */; };
 		9256ED471DA094DA0076BDA1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9256ED451DA094DA0076BDA1 /* GoogleService-Info.plist */; };
 		9256ED481DA094DA0076BDA1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9256ED451DA094DA0076BDA1 /* GoogleService-Info.plist */; };
-		9256ED4A1DA097A50076BDA1 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9256ED491DA097A50076BDA1 /* GoogleMobileAds.framework */; };
-		9256ED4B1DA097A60076BDA1 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9256ED491DA097A50076BDA1 /* GoogleMobileAds.framework */; };
-		9256ED4C1DA097A60076BDA1 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9256ED491DA097A50076BDA1 /* GoogleMobileAds.framework */; };
+		925D05521DA5FC7A00C774AF /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925D05511DA5FC7A00C774AF /* GoogleMobileAds.framework */; };
+		925D05531DA5FC7A00C774AF /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925D05511DA5FC7A00C774AF /* GoogleMobileAds.framework */; };
+		925D05541DA5FC7A00C774AF /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925D05511DA5FC7A00C774AF /* GoogleMobileAds.framework */; };
 		927C48941D63D910002DE3E6 /* replay.png in Resources */ = {isa = PBXBuildFile; fileRef = 927C48921D63D910002DE3E6 /* replay.png */; };
 		927C48961D63D993002DE3E6 /* upload (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 927C48951D63D993002DE3E6 /* upload (1).png */; };
 		927C48981D63DAD7002DE3E6 /* home-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 927C48971D63DAD7002DE3E6 /* home-button.png */; };
@@ -83,7 +80,8 @@
 		92A8CB401D5D243300023E42 /* Clinton_or_TrumpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A8CB3F1D5D243300023E42 /* Clinton_or_TrumpTests.m */; };
 		92A8CB4B1D5D243300023E42 /* Clinton_or_TrumpUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A8CB4A1D5D243300023E42 /* Clinton_or_TrumpUITests.m */; };
 		92A8CB671D5D312100023E42 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A8CB661D5D312100023E42 /* HomeViewController.m */; };
-		92BA3E9D1DA5F0B2000E46AB /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92BA3E9C1DA5F0B2000E46AB /* FirebaseAnalytics.framework */; };
+		92BA3EA51DA5F34E000E46AB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9224F3641D9B6378009A0208 /* StoreKit.framework */; };
+		92BA3EA61DA5F355000E46AB /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9208048F1D5E90380012C472 /* GameKit.framework */; };
 		92BF650D1D66A80D0016218E /* Quotes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 92BF650C1D66A80D0016218E /* Quotes.plist */; };
 /* End PBXBuildFile section */
 
@@ -121,14 +119,12 @@
 		9224F3641D9B6378009A0208 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		922D5FB41D662E7C00A8AD4B /* play-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play-button.png"; sourceTree = "<group>"; };
 		922D5FB81D662FE300A8AD4B /* settings (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings (1).png"; sourceTree = "<group>"; };
-		923481A31D9649B100CCC6DE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		924076461D5D44C700BC0BE9 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		924076471D5D44C700BC0BE9 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		9240765C1D5D573D00BC0BE9 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		9240765D1D5D573D00BC0BE9 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		9256ED451DA094DA0076BDA1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		9256ED491DA097A50076BDA1 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
-		9256ED4D1DA098650076BDA1 /* Firebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
+		925D05511DA5FC7A00C774AF /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		927C48921D63D910002DE3E6 /* replay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = replay.png; sourceTree = "<group>"; };
 		927C48951D63D993002DE3E6 /* upload (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "upload (1).png"; sourceTree = "<group>"; };
 		927C48971D63DAD7002DE3E6 /* home-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-button.png"; sourceTree = "<group>"; };
@@ -189,7 +185,6 @@
 		92A8CB4C1D5D243300023E42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92A8CB651D5D312100023E42 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		92A8CB661D5D312100023E42 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		92BA3E9C1DA5F0B2000E46AB /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAnalytics.framework; sourceTree = "<group>"; };
 		92BF650C1D66A80D0016218E /* Quotes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Quotes.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,11 +193,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9224F3661D9B673A009A0208 /* StoreKit.framework in Frameworks */,
-				923481A41D9649B200CCC6DE /* AVFoundation.framework in Frameworks */,
-				9256ED4A1DA097A50076BDA1 /* GoogleMobileAds.framework in Frameworks */,
-				920804901D5E90380012C472 /* GameKit.framework in Frameworks */,
-				92BA3E9D1DA5F0B2000E46AB /* FirebaseAnalytics.framework in Frameworks */,
+				925D05521DA5FC7A00C774AF /* GoogleMobileAds.framework in Frameworks */,
+				92BA3EA61DA5F355000E46AB /* GameKit.framework in Frameworks */,
+				92BA3EA51DA5F34E000E46AB /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +203,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9256ED4B1DA097A60076BDA1 /* GoogleMobileAds.framework in Frameworks */,
+				925D05531DA5FC7A00C774AF /* GoogleMobileAds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,7 +211,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9256ED4C1DA097A60076BDA1 /* GoogleMobileAds.framework in Frameworks */,
+				925D05541DA5FC7A00C774AF /* GoogleMobileAds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,7 +326,6 @@
 		92A8CB241D5D243000023E42 /* Clinton or Trump */ = {
 			isa = PBXGroup;
 			children = (
-				9256ED4D1DA098650076BDA1 /* Firebase.h */,
 				92A8CB281D5D243000023E42 /* AppDelegate.h */,
 				92A8CB291D5D243000023E42 /* AppDelegate.m */,
 				924076461D5D44C700BC0BE9 /* GameViewController.h */,
@@ -388,10 +380,8 @@
 		92FCAD641D628ADA00CA7482 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				92BA3E9C1DA5F0B2000E46AB /* FirebaseAnalytics.framework */,
-				9256ED491DA097A50076BDA1 /* GoogleMobileAds.framework */,
+				925D05511DA5FC7A00C774AF /* GoogleMobileAds.framework */,
 				9224F3641D9B6378009A0208 /* StoreKit.framework */,
-				923481A31D9649B100CCC6DE /* AVFoundation.framework */,
 				9208048F1D5E90380012C472 /* GameKit.framework */,
 			);
 			name = Frameworks;
@@ -763,9 +753,12 @@
 					or,
 					Trump,
 					"$(PROJECT_DIR)/Clinton\\ or\\ Trump",
+					"$(PROJECT_DIR)/Clinton\\ or\\ Trump",
+					"$(PROJECT_DIR)/Clinton\\ or\\ Trump",
+					"$(PROJECT_DIR)/Clinton\\ or\\ Trump",
 				);
 				INFOPLIST_FILE = "Clinton or Trump/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.JackStenglein.Clinton-or-Trump1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -796,9 +789,12 @@
 					or,
 					Trump,
 					"$(PROJECT_DIR)/Clinton\\ or\\ Trump",
+					"$(PROJECT_DIR)/Clinton\\ or\\ Trump",
+					"$(PROJECT_DIR)/Clinton\\ or\\ Trump",
+					"$(PROJECT_DIR)/Clinton\\ or\\ Trump",
 				);
 				INFOPLIST_FILE = "Clinton or Trump/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.JackStenglein.Clinton-or-Trump1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -817,6 +813,9 @@
 					"$(PROJECT_DIR)/Clinton",
 					or,
 					Trump,
+					"$(PROJECT_DIR)/Clinton\\ or\\ Trump",
+					"$(PROJECT_DIR)/Clinton\\ or\\ Trump",
+					"$(PROJECT_DIR)/Clinton\\ or\\ Trump",
 				);
 				INFOPLIST_FILE = "Clinton or TrumpTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -836,6 +835,9 @@
 					"$(PROJECT_DIR)/Clinton",
 					or,
 					Trump,
+					"$(PROJECT_DIR)/Clinton\\ or\\ Trump",
+					"$(PROJECT_DIR)/Clinton\\ or\\ Trump",
+					"$(PROJECT_DIR)/Clinton\\ or\\ Trump",
 				);
 				INFOPLIST_FILE = "Clinton or TrumpTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -854,6 +856,9 @@
 					"$(PROJECT_DIR)/Clinton",
 					or,
 					Trump,
+					"$(PROJECT_DIR)/Clinton\\ or\\ Trump",
+					"$(PROJECT_DIR)/Clinton\\ or\\ Trump",
+					"$(PROJECT_DIR)/Clinton\\ or\\ Trump",
 				);
 				INFOPLIST_FILE = "Clinton or TrumpUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -872,6 +877,9 @@
 					"$(PROJECT_DIR)/Clinton",
 					or,
 					Trump,
+					"$(PROJECT_DIR)/Clinton\\ or\\ Trump",
+					"$(PROJECT_DIR)/Clinton\\ or\\ Trump",
+					"$(PROJECT_DIR)/Clinton\\ or\\ Trump",
 				);
 				INFOPLIST_FILE = "Clinton or TrumpUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
