@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 //#import "Firebase.h"//;
+@import GoogleMobileAds;
 
 @interface AppDelegate ()
 
@@ -17,6 +18,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [GADMobileAds configureWithApplicationID:@"ca-app-pub-2103446892914207~1330190376"];
+    
     
     if( ![[NSUserDefaults standardUserDefaults] boolForKey:@"hasLaunchedBefore"] )
     {
